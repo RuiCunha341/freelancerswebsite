@@ -1,0 +1,41 @@
+import React, { Suspense } from 'react';
+import './App.css';
+import './index.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import FullPage from 'containers/FullPage';
+import { IRoute, Routes as AppRoutes } from './routes';
+import configureStartup from './startup';
+
+configureStartup();
+
+function App() {
+    return (
+        <Suspense fallback={<div />}>
+            <BrowserRouter>
+                <FullPage>
+                    <ToastContainer
+                        position='top-right'
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme='light'
+                    />
+                    <Routes>
+                        {AppRoutes.map(({ url, component }: IRoute) => (
+                            <Route key={url} path={url} element={component} />
+                        ))}
+                    </Routes>
+                </FullPage>
+            </BrowserRouter>
+        </Suspense>
+    );
+}
+
+export default App;
