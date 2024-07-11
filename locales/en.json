@@ -1,0 +1,8 @@
+{
+    "general": {
+        "COUNTY_OF":"Município de"
+    },
+    "errors": {
+        "0": "Aconteceu um erro, por favor tente mais tarde."
+    }
+}

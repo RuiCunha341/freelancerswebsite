@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/freelancerswebsite/static/css/main.f4d8b8fa.css",
+    "main.js": "/freelancerswebsite/static/js/main.fbcd2605.js",
+    "static/js/453.cda58dff.chunk.js": "/freelancerswebsite/static/js/453.cda58dff.chunk.js",
+    "index.html": "/freelancerswebsite/index.html",
+    "static/media/getFetch.cjs": "/freelancerswebsite/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.f4d8b8fa.css.map": "/freelancerswebsite/static/css/main.f4d8b8fa.css.map",
+    "main.fbcd2605.js.map": "/freelancerswebsite/static/js/main.fbcd2605.js.map",
+    "453.cda58dff.chunk.js.map": "/freelancerswebsite/static/js/453.cda58dff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4d8b8fa.css",
+    "static/js/main.fbcd2605.js"
+  ]
+}
