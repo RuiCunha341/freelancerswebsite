@@ -1,12 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import classNames from 'classnames';
-import React, {
-    useEffect,
-    useRef,
-    useState,
-    ReactElement,
-    ReactNode,
-} from 'react';
+import React, { ReactElement, useEffect, useRef, useState } from 'react';
 import { useScroll } from 'hooks/useScroll';
 import { IEffectProps } from './interface';
 import {
@@ -28,7 +22,7 @@ function Effects({
     initialState,
     finalState,
 }: IEffectProps) {
-    const elementRef = useRef<HTMLDivElement>(null);
+    const elementRef = useRef(null);
     const [listenScroll, setListenScroll] = useState(
         () =>
             !!triggerOnScrollPosition ||
@@ -36,7 +30,7 @@ function Effects({
             !!scrollConstant,
     );
     const [animated, setAnimated] = useState(false);
-    const [style, setStyle] = useState<React.CSSProperties>(() =>
+    const [style, setStyle] = useState(() =>
         initialState ? effectStateToStyle(initialState) : {},
     );
 
@@ -44,9 +38,7 @@ function Effects({
 
     useEffect(() => {
         if (scrollConstant) {
-            const { top } = (
-                elementRef.current as HTMLElement
-            ).getBoundingClientRect();
+            const { top } = (elementRef.current as any).getBoundingClientRect();
 
             const positionY =
                 initialState &&
@@ -81,11 +73,8 @@ function Effects({
             setStyle(effectStateToStyle(finalState));
             return;
         }
-
         if (triggerOnElementPositionOnScreen) {
-            const { top } = (
-                elementRef.current as HTMLElement
-            ).getBoundingClientRect();
+            const { top } = (elementRef.current as any).getBoundingClientRect();
 
             const positionY =
                 initialState &&

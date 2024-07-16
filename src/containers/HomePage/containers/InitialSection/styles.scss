@@ -1,0 +1,37 @@
+.initial-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    &__text-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 20px;
+        flex-direction: column;
+        margin-bottom: 15%;
+
+        &__text {
+            position: relative;
+            z-index: 2;
+            color: white;
+            font-size: 50px;
+            background-color: rgba(0, 0, 0, 0.637);
+            font-weight: 700;
+        }
+    }
+
+    &__background-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        z-index: 1;
+    }
+}
