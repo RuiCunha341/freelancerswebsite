@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/ocorrencias/linkwithus-2022-website.git
+git remote add origin https://gitlab.com/ocorrencias/website-2022-website.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/ocorrencias/linkwithus-2022-website/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/ocorrencias/website-2022-website/-/settings/integrations)
 
 ## Collaborate with your team
 
