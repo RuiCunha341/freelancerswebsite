@@ -8,6 +8,7 @@ function HomePage() {
     return (
         <div className='home-page'>
             <InitialSection />
+            <ExampleSection />
             <ExampleSection2 />
             <ExampleSection />
             <ExampleSection2 />
