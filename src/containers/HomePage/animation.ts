@@ -3,7 +3,7 @@ export const sectionContentMotion = {
     animate: {
         opacity: [0, 1],
         transition: {
-            duration: 0.4,
+            duration: 1,
             ease: 'easeIn',
         },
     },
