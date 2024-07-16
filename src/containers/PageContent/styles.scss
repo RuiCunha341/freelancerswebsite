@@ -1,0 +1,16 @@
+.page-content {
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    &__body {
+        flex: 1;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: calc(100% - 80px);
+        background-color: black;
+    }
+}

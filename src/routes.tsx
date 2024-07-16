@@ -1,6 +1,8 @@
 import React from 'react';
 import NotFoundPage from 'containers/404Page';
 import HomePage from 'containers/HomePage';
+import Menu from 'containers/Menu';
+import PageContent from 'containers/PageContent';
 
 export interface IRoute {
     url: string;
@@ -9,11 +11,19 @@ export interface IRoute {
 
 export const Routes: IRoute[] = [
     {
-        url: '/',
-        component: <HomePage />,
+        url: '/freelancerswebsite/',
+        component: (
+            <PageContent>
+                <HomePage />
+            </PageContent>
+        ),
     },
     {
-        url: '*',
-        component: <NotFoundPage />,
+        url: '/freelancerswebsite/*',
+        component: (
+            <PageContent>
+                <NotFoundPage />
+            </PageContent>
+        ),
     },
 ];
