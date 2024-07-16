@@ -1,0 +1,40 @@
+.example-section2 {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+
+    &__right-side,
+    &__left-side {
+        flex: 1 1 50%;
+        box-sizing: border-box;
+        padding: 10px;
+
+        @media (max-width: 1000px) {
+            flex: 1 1 100%;
+        }
+    }
+
+    &__right-side {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 200px;
+            height: 200px;
+            path {
+                stroke: white;
+            }
+        }
+    }
+
+    &__left-side {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 50px;
+        font-weight: 700;
+    }
+}
