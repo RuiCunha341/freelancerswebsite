@@ -76,7 +76,7 @@ function AboutUsSection() {
                     initialState={{ opacity: 0, positionX: '-200px' }}
                     finalState={{ opacity: 1, positionX: '0px' }}
                 >
-                    <p>{t('aboutUs.WE_MAKE')}</p>
+                    <p>{t('aboutUs.DIGITAL_PRODUCTS')}</p>
                 </Effects>
             </div>
         </div>
