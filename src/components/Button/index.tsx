@@ -3,7 +3,7 @@ import './styles.scss';
 import classNames from 'classnames';
 import { IButton } from './interface';
 
-function Button({ text }: IButton) {
+function Button({ text, animateText = true }: IButton) {
     const [hovering, setHovering] = useState(false);
     return (
         <button
@@ -13,20 +13,22 @@ function Button({ text }: IButton) {
             onMouseLeave={() => setHovering(false)}
         >
             <span
-                className={classNames('button__default-text', {
+                className={classNames('button__default-text bold', {
                     hovering,
+                    animateText,
                 })}
             >
                 {text}
             </span>
             <span
-                className={classNames('button__hovering-text', {
+                className={classNames('button__hovering-text bold', {
                     hovering,
+                    animateText,
                 })}
             >
                 {text}
             </span>
-            <span className='button__hidden-text'>{text}</span>
+            <span className='button__hidden-text bold'>{text}</span>
         </button>
     );
 }

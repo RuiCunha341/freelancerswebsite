@@ -1,5 +1,9 @@
 import React, { Suspense } from 'react';
 import './App.css';
+import './fonts/CircularStd-Black.woff';
+import './fonts/CircularStd-Bold.woff';
+import './fonts/CircularStd-BlackItalic.woff';
+import './fonts/CircularStd-BoldItalic.woff';
 import './index.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

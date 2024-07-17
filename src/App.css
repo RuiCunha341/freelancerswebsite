@@ -6,51 +6,83 @@
     cursor: unset;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-div.Toastify__progress-bar-theme--dark {
-    background: #a71a1d;
-}
-
-div.Toastify__toast-theme--dark {
-    color: #f1d8d8;
-    background: rgba(0, 0, 0, 1);
-}
-
-div.Toastify__toast {
-    font-size: 20px;
-}
-
-.Toastify__close-button path{
-    fill: #ff0005;
-}
-
+/* Regular font */
 @font-face {
-    /*
-    font-family: 'VT323-Regular';
-    src: local('VT323-Regular'),
-        url(./fonts/VT323-Regular.ttf) format('truetype');
-        */
+    font-family: 'CircularStd-Black';
+    src: local('CircularStd-Bold'),
+        url('./fonts/CircularStd-Bold.woff') format('woff');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Bold font */
+@font-face {
+    font-family: 'CircularStd-Black-Bold'; /*Can be any text*/
+    src: local('CircularStd-Black'),
+        url('./fonts/CircularStd-Black.woff') format('woff');
 }
 
+/* Italic font */
+@font-face {
+    font-family: 'CircularStd-Black-Italic';
+    src: local('CircularStd-BlackItalic'),
+        url('./fonts/CircularStd-BlackItalic.woff') format('woff');
+}
+
+/* Bold Italic font */
+@font-face {
+    font-family: 'CircularStd-Black-Bold-Italic';
+    src: local('CircularStd-BoldItalic'),
+        url('./fonts/CircularStd-BoldItalic.woff') format('woff');
+}
+
+/* Regular */
 html,
 html body,
 html .text,
 html button,
-div.Toastify__toast {
-    /*font-family: 'VT323-Regular', monospace !important;*/
+html p,
+html span,
+html div,
+html a {
+    font-family: 'CircularStd-Black' !important;
 }
 
-html body{
+/* Bold */
+html,
+html body,
+html .text.bold,
+html button.bold,
+html p.bold,
+html span.bold,
+html div.bold,
+html a.bold {
+    font-family: 'CircularStd-Black-Bold' !important;
+}
+
+/* Italic */
+html,
+html body,
+html .text.italic,
+html button.italic,
+html p.italic,
+html span.italic,
+html div.italic,
+html a.italic {
+    font-family: 'CircularStd-Black-Italic' !important;
+}
+
+/* Bold Italic */
+html,
+html body,
+html .text.bold-italic,
+html button.bold-italic,
+html p.bold-italic,
+html span.bold-italic,
+html div.bold-italic,
+html a.bold-italic {
+    font-family: 'CircularStd-Black-Bold-Italic' !important;
+}
+
+html body {
     background-color: black;
 }
 
@@ -84,27 +116,3 @@ START- SCROLL-BAR style
 /*
 END - SCROLL-BAR style
 */
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}

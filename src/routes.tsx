@@ -1,7 +1,6 @@
 import React from 'react';
 import NotFoundPage from 'containers/404Page';
 import HomePage from 'containers/HomePage';
-import Menu from 'containers/Menu';
 import PageContent from 'containers/PageContent';
 
 export interface IRoute {

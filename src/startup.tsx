@@ -36,7 +36,8 @@ function configureStartup() {
         .init({
             backend: {
                 // for all available options read the backend's repository readme file
-                loadPath: '/locales/{{lng}}.json',
+                loadPath:
+                    'https://ruicunha341.github.io/freelancerswebsite/locales/{{lng}}.json',
             },
             fallbackLng: 'en',
             debug: appConfig.isDevelopment,
