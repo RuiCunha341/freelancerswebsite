@@ -2,6 +2,11 @@
     "general": {
         "COUNTY_OF":"Município de"
     },
+    "homePage":{
+        "INITIAL_SECTION_1":"Repensar — Reciclar: Criar",
+        "INITIAL_SECTION_2":"Economia Circular Sustentável",
+        "INITIAL_SECTION_3":"para Plásticos"
+    },
     "errors": {
         "0": "Aconteceu um erro, por favor tente mais tarde."
     }
