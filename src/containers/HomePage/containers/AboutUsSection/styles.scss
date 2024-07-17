@@ -1,0 +1,16 @@
+.about-us-section {
+    color: white;
+    margin: 100px 0px;
+    margin-left: 15%;
+    overflow: hidden;
+
+    &__text-container {
+        p {
+            font-size: 100px;
+        }
+
+        p.red{
+            color:rgb(145, 0, 0);
+        }
+    }
+}
