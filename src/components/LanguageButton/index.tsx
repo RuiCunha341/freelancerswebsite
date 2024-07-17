@@ -26,7 +26,8 @@ function LanguageButton() {
                 className={classNames(
                     'language-button-container__button bold',
                     {
-                        active: i18n.language === 'pt',
+                        active:
+                            i18n.language === 'pt' || i18n.language === 'pt-PT',
                     },
                 )}
                 onClick={() => i18n.changeLanguage('pt')}
