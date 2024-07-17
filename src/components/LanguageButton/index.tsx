@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles.scss';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
@@ -6,6 +6,11 @@ import classNames from 'classnames';
 function LanguageButton() {
     // language => "en" or "pt"
     const { i18n } = useTranslation();
+
+    useEffect(() => {
+        if (i18n.language !== 'en' && i18n.language !== 'pt')
+            i18n.changeLanguage('en');
+    }, [i18n.language]);
 
     return (
         <div className='language-button-container'>
