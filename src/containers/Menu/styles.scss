@@ -9,20 +9,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
 
     &__left-side {
         font-size: 30px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 20px;
+        gap: 30px;
     }
 
     &__right-side {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 20px;
+        gap: 30px;
+
+        &__button{
+            margin-left: 20px;
+        }
     }
 }

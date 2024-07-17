@@ -10,6 +10,13 @@
         "INITIAL_SECTION_2":"Economia Circular Sustentável",
         "INITIAL_SECTION_3":"para Plásticos"
     },
+    "aboutUs":{
+        "WE_MAKE":"Nós Fazemos",
+        "INCREDIBLE":"INCRÍVEIS",
+        "SPECIAL":"ESPECIAIS",
+        "UNIQUE":"ÚNICOS",
+        "DIGITAL_PRODUCTS":"Produtos Digitais."
+    },
     "errors": {
         "0": "Aconteceu um erro, por favor tente mais tarde."
     }

@@ -15,10 +15,15 @@ function Menu() {
                 <LanguageButton />
             </div>
             <div className='website-menu__right-side'>
-                <Link text={t('general.ABOUT_US')} href='/' />
+                <Link text={t('general.ABOUT_US')} href='/#AboutUs' />
                 <Link text={t('general.PROJECTS')} href='/' />
                 <Link text={t('general.SERVICES')} href='/' />
-                <Button text={t('general.CONTACT_US')} animateText={false} />
+                <div className='website-menu__right-side__button'>
+                    <Button
+                        text={t('general.CONTACT_US')}
+                        animateText={false}
+                    />
+                </div>
             </div>
         </div>
     );
