@@ -13,6 +13,10 @@
 
     &__left-side {
         font-size: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
     }
 
     &__right-side {

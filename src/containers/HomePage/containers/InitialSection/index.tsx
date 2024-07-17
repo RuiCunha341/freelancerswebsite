@@ -12,7 +12,6 @@ function InitialSection() {
             <Effects
                 duration={0.8}
                 delay={0.1}
-                triggerOnElementPositionOnScreen={0}
                 initialState={{ opacity: 0 }}
                 finalState={{ opacity: 1 }}
             >
@@ -26,7 +25,6 @@ function InitialSection() {
                 <Effects
                     duration={0.8}
                     delay={0.5}
-                    triggerOnElementPositionOnScreen={0}
                     initialState={{ opacity: 0, scale: 0.5 }}
                     finalState={{ opacity: 1, scale: 1 }}
                 >
@@ -37,7 +35,6 @@ function InitialSection() {
                 <Effects
                     duration={0.8}
                     delay={0.7}
-                    triggerOnElementPositionOnScreen={0}
                     initialState={{ opacity: 0, scale: 0.5 }}
                     finalState={{ opacity: 1, scale: 1 }}
                 >
