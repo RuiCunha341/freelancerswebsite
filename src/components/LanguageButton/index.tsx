@@ -1,43 +1,54 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
+import { LanguageEnum } from 'enums/languages';
 
 function LanguageButton() {
     // language => "en" or "pt"
     const { i18n } = useTranslation();
+    const [language, setLanguage] = useState<LanguageEnum>(
+        LanguageEnum.English,
+    );
 
     useEffect(() => {
-        if (i18n.language !== 'en' && i18n.language !== 'pt')
-            i18n.changeLanguage('en');
-    }, [i18n.language]);
+        // Get the current language from the html element
+        const currentLang = document.documentElement.lang;
+
+        if (currentLang === 'pt') setLanguage(LanguageEnum.Portuguese);
+        // default language is EN
+        setLanguage(LanguageEnum.English);
+    }, []);
+
+    useEffect(() => {
+        i18n.changeLanguage(language);
+    }, [language]);
 
     return (
         <div className='language-button-container'>
             <button
                 type='button'
-                onClick={() => i18n.changeLanguage('en')}
+                onClick={() => setLanguage(LanguageEnum.English)}
                 className={classNames(
                     'language-button-container__button bold',
                     {
-                        active: i18n.language === 'en',
+                        active: language === LanguageEnum.English,
                     },
                 )}
             >
-                EN
+                {LanguageEnum.English.toUpperCase()}
             </button>
             <button
                 type='button'
                 className={classNames(
                     'language-button-container__button bold',
                     {
-                        active:
-                            i18n.language === 'pt' || i18n.language === 'pt-PT',
+                        active: language === LanguageEnum.Portuguese,
                     },
                 )}
-                onClick={() => i18n.changeLanguage('pt')}
+                onClick={() => setLanguage(LanguageEnum.Portuguese)}
             >
-                PT
+                {LanguageEnum.Portuguese.toUpperCase()}
             </button>
         </div>
     );
