@@ -2,8 +2,11 @@ import React from 'react';
 import './styles.scss';
 import UserIcon from 'assets/icons/UserIcon';
 import Effects from 'components/Effects';
+import { useTranslation } from 'react-i18next';
 
 function ExampleSection2() {
+    const { t } = useTranslation();
+
     return (
         <div className='example-section2'>
             <Effects
@@ -14,13 +17,13 @@ function ExampleSection2() {
             >
                 <div className='example-section2__left-side'>
                     <p className='example-section2__left-side__text'>
-                        Rethink — Recycling: Creating a
+                        {t('homePage.INITIAL_SECTION_1')}
                     </p>
                     <p className='example-section2__left-side__text'>
-                        Sustainable Circular Economy
+                        {t('homePage.INITIAL_SECTION_2')}
                     </p>
                     <p className='example-section2__left-side__text'>
-                        for Plastics
+                        {t('homePage.INITIAL_SECTION_3')}
                     </p>
                 </div>
             </Effects>
