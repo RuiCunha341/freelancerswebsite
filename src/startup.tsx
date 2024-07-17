@@ -36,8 +36,7 @@ function configureStartup() {
         .init({
             backend: {
                 // for all available options read the backend's repository readme file
-                loadPath:
-                    'https://ruicunha341.github.io/freelancerswebsite/locales/{{lng}}.json',
+                loadPath: `${appConfig.REACT_APP_TRANSLATIONS_URL}/locales/{{lng}}.json`,
             },
             fallbackLng: 'en',
             debug: appConfig.isDevelopment,

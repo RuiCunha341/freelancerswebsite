@@ -2,6 +2,7 @@ import React from 'react';
 import NotFoundPage from 'containers/404Page';
 import HomePage from 'containers/HomePage';
 import PageContent from 'containers/PageContent';
+import config from 'config';
 
 export interface IRoute {
     url: string;
@@ -10,7 +11,7 @@ export interface IRoute {
 
 export const Routes: IRoute[] = [
     {
-        url: '/freelancerswebsite/',
+        url: `${config.BASE_URL}/`,
         component: (
             <PageContent>
                 <HomePage />
@@ -18,7 +19,7 @@ export const Routes: IRoute[] = [
         ),
     },
     {
-        url: '/freelancerswebsite/*',
+        url: `${config.BASE_URL}/*`,
         component: (
             <PageContent>
                 <NotFoundPage />

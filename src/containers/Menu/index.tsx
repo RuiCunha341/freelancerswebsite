@@ -3,6 +3,7 @@ import './styles.scss';
 import Button from 'components/Button';
 import LanguageButton from 'components/LanguageButton';
 import { useTranslation } from 'react-i18next';
+import Link from 'components/Link';
 
 function Menu() {
     const { t } = useTranslation();
@@ -14,6 +15,9 @@ function Menu() {
                 <LanguageButton />
             </div>
             <div className='website-menu__right-side'>
+                <Link text={t('general.ABOUT_US')} href='/' />
+                <Link text={t('general.PROJECTS')} href='/' />
+                <Link text={t('general.SERVICES')} href='/' />
                 <Button text={t('general.CONTACT_US')} animateText={false} />
             </div>
         </div>

@@ -12,13 +12,17 @@
     gap: 20px;
 
     &__left-side {
-        font-size: 35px;
+        font-size: 30px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 40px;
+        gap: 20px;
     }
 
     &__right-side {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
     }
 }

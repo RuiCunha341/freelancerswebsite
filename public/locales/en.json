@@ -1,6 +1,9 @@
 {
     "general": {
-        "CONTACT_US":"Contact Us"
+        "CONTACT_US":"Contact Us",
+        "ABOUT_US":"About Us",
+        "PROJECTS":"Projects",
+        "SERVICES":"Services"
     },
     "homePage":{
         "INITIAL_SECTION_1":"Rethink — Recycling: Creating",
