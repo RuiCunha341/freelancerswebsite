@@ -2,6 +2,7 @@ import React from 'react';
 import { Link as ReactLink } from 'react-router-dom';
 import config from 'config';
 import { ILink } from './interface';
+import './styles.scss';
 
 function Link({ text, href }: ILink) {
     return (
