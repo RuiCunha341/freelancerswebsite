@@ -1,9 +1,12 @@
 import React from 'react';
 import './styles.scss';
 import Effects from 'components/Effects';
+import { useTranslation } from 'react-i18next';
 import BackgroundImage from '../../../../assets/images/temporary.webp';
 
 function InitialSection() {
+    const { t } = useTranslation();
+
     return (
         <div className='initial-section'>
             <Effects
@@ -28,7 +31,7 @@ function InitialSection() {
                     finalState={{ opacity: 1, scale: 1 }}
                 >
                     <div className='initial-section__text-container__text'>
-                        Rethink — Recycling: Creating a
+                        {t('homePage.INITIAL_SECTION_1')}
                     </div>
                 </Effects>
                 <Effects
@@ -39,7 +42,7 @@ function InitialSection() {
                     finalState={{ opacity: 1, scale: 1 }}
                 >
                     <div className='initial-section__text-container__text'>
-                        Sustainable Circular Economy
+                        {t('homePage.INITIAL_SECTION_2')}
                     </div>
                 </Effects>
                 <Effects
@@ -50,7 +53,7 @@ function InitialSection() {
                     finalState={{ opacity: 1, scale: 1 }}
                 >
                     <div className='initial-section__text-container__text'>
-                        for Plastics
+                        {t('homePage.INITIAL_SECTION_3')}
                     </div>
                 </Effects>
             </div>

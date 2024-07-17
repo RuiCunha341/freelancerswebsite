@@ -7,7 +7,7 @@ function Menu() {
         <div className='website-menu'>
             <div className='website-menu__left-side'>Logo</div>
             <div className='website-menu__right-side'>
-                <Button text='Contact Us' />
+                <Button text='Contact Us' animateText={false} />
             </div>
         </div>
     );

@@ -2,6 +2,11 @@
     "general": {
         "COUNTY_OF":"Município de"
     },
+    "homePage":{
+        "INITIAL_SECTION_1":"Rethink — Recycling: Creating",
+        "INITIAL_SECTION_2":"Sustainable Circular Economy",
+        "INITIAL_SECTION_3":"for Plastics"
+    },
     "errors": {
         "0": "Aconteceu um erro, por favor tente mais tarde."
     }
