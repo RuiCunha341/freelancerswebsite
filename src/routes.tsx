@@ -1,5 +1,4 @@
 import React from 'react';
-import NotFoundPage from 'containers/404Page';
 import HomePage from 'containers/HomePage';
 import PageContent from 'containers/PageContent';
 import config from 'config';
@@ -22,7 +21,7 @@ export const Routes: IRoute[] = [
         url: `${config.BASE_URL}/*`,
         component: (
             <PageContent>
-                <NotFoundPage />
+                <HomePage />
             </PageContent>
         ),
     },
