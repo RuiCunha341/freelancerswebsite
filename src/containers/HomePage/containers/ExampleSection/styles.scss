@@ -1,5 +1,7 @@
+@import '/src/variables';
+
 .example-section {
-    color: white;
+    color: $white;
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
@@ -23,7 +25,7 @@
             width: 200px;
             height: 200px;
             path {
-                stroke: white;
+                stroke: $white;
             }
         }
     }
