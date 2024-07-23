@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import Button from 'components/Button';
 import LanguageSelector from 'components/LanguageSelector';
@@ -7,12 +7,42 @@ import { useTranslation } from 'react-i18next';
 import Link from 'components/Link';
 import Effects from 'components/Effects';
 import { SectionEnum } from 'enums/sections';
+import classNames from 'classnames';
 
 function Menu() {
     const { t } = useTranslation();
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        let lastScrollTop = 0;
+
+        const handleScroll = () => {
+            const currentScrollTop = window.scrollY;
+            if (currentScrollTop > lastScrollTop) {
+                // User is scrolling down
+                setVisible(false);
+            } else {
+                // User is scrolling up
+                setVisible(true);
+            }
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
-        <div className='website-menu'>
+        <div
+            className={classNames('website-menu', {
+                visible,
+                hidden: !visible,
+            })}
+        >
             <div className='website-menu__left-side'>
                 <Effects
                     duration={0.8}
