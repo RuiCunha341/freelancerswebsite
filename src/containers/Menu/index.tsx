@@ -1,9 +1,10 @@
 import React from 'react';
 import './styles.scss';
 import Button from 'components/Button';
-import LanguageButton from 'components/LanguageButton';
+import LanguageSelector from 'components/LanguageSelector';
 import { useTranslation } from 'react-i18next';
 import Link from 'components/Link';
+import Effects from 'components/Effects';
 
 function Menu() {
     const { t } = useTranslation();
@@ -11,18 +12,59 @@ function Menu() {
     return (
         <div className='website-menu'>
             <div className='website-menu__left-side'>
-                <span>Logo</span>
-                <LanguageButton />
+                <Effects
+                    duration={0.8}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <span>Logo</span>
+                </Effects>
+                <Effects
+                    duration={0.8}
+                    delay={0.1}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <LanguageSelector />
+                </Effects>
             </div>
             <div className='website-menu__right-side'>
-                <Link text={t('general.ABOUT_US')} href='/#AboutUs' />
-                <Link text={t('general.PROJECTS')} href='/' />
-                <Link text={t('general.SERVICES')} href='/' />
+                <Effects
+                    duration={0.8}
+                    delay={0.2}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <Link text={t('general.ABOUT_US')} href='/#AboutUs' />
+                </Effects>
+                <Effects
+                    duration={0.8}
+                    delay={0.3}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <Link text={t('general.PROJECTS')} href='/' />
+                </Effects>
+                <Effects
+                    duration={0.8}
+                    delay={0.4}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <Link text={t('general.SERVICES')} href='/' />
+                </Effects>
                 <div className='website-menu__right-side__button'>
-                    <Button
-                        text={t('general.CONTACT_US')}
-                        animateText={false}
-                    />
+                    <Effects
+                        duration={0.8}
+                        delay={0.5}
+                        initialState={{ opacity: 0, positionY: '-200px' }}
+                        finalState={{ opacity: 1, positionY: '0px' }}
+                    >
+                        <Button
+                            text={t('general.CONTACT_US')}
+                            animateText={false}
+                        />
+                    </Effects>
                 </div>
             </div>
         </div>
