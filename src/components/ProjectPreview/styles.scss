@@ -1,0 +1,74 @@
+@import '/src/variables';
+
+.project-preview-container {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+
+    &__button {
+        border: none;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        overflow: hidden;
+        position: relative;
+        border-radius: 7px;
+
+        &__title-container {
+            width: 100%;
+            transition: all 0.2s ease-in-out;
+            background-color: $blackTransparentBackground;
+            box-shadow: 0px 0px 20px 20px $blackTransparentBackground;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            color: $white;
+            opacity: 1;
+            padding: 10px 0px;
+            text-align: left;
+
+            p {
+                margin-left: 20px;
+                font-size: 20px;
+            }
+        }
+
+        &__title-container.hidden {
+            opacity: 0;
+            bottom: calc(0% - 50px);
+        }
+
+        &__cover-image {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            opacity: 1;
+            transition: all 0.2s ease-in-out;
+            border-radius: 7px;
+        }
+
+        &__cover-image.hidden {
+            opacity: 0;
+        }
+
+        &__preview-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 7px;
+        }
+    }
+
+    &__button:hover {
+        cursor: pointer;
+    }
+}
