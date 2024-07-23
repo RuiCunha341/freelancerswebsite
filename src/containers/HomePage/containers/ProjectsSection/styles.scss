@@ -1,0 +1,34 @@
+@import '/src/variables';
+
+.projects-section-container {
+    margin-top: 100px;
+
+    &__title {
+        margin-bottom: 50px;
+        font-size: 80px;
+        color: $white;
+    }
+
+    &__projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        &__project-container {
+            position: relative;
+            width: calc((100% - 90px) / 4);
+
+            @media (max-width: 1500px) {
+                width: calc((100% - 60px) / 3);
+            }
+
+            @media (max-width: 800px) {
+                width: calc((100% - 30px) / 2);
+            }
+
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+        }
+    }
+}
