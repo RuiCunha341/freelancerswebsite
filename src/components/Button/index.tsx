@@ -5,6 +5,7 @@ import { IButton } from './interface';
 
 function Button({ text, animateText = true }: IButton) {
     const [hovering, setHovering] = useState(false);
+
     return (
         <button
             type='button'

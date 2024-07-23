@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.scss';
 import InitialSection from './containers/InitialSection';
-import ExampleSection from './containers/ExampleSection';
+import ServicesSection from './containers/ServicesSection';
 import ProjectsSection from './containers/ProjectsSection';
 import AboutUsSection from './containers/AboutUsSection';
 
@@ -10,8 +10,8 @@ function HomePage() {
         <div className='home-page'>
             <InitialSection />
             <AboutUsSection />
-            <ExampleSection />
             <ProjectsSection />
+            <ServicesSection />
         </div>
     );
 }

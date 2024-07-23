@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import Effects from 'components/Effects';
 import { useTranslation } from 'react-i18next';
+import { SectionEnum } from 'enums/sections';
 
 function AboutUsSection() {
     const { t, i18n } = useTranslation();
@@ -30,7 +31,17 @@ function AboutUsSection() {
     }, [words.length]);
 
     return (
-        <div className='about-us-section' id='AboutUs'>
+        <div className='about-us-section' id={SectionEnum.AboutUs}>
+            <Effects
+                duration={0.8}
+                triggerOnElementPositionOnScreen={95}
+                initialState={{ opacity: 0, positionX: '-200px' }}
+                finalState={{ opacity: 1, positionX: '0px' }}
+            >
+                <p className='about-us-section__title'>
+                    {t('general.ABOUT_US')}
+                </p>
+            </Effects>
             <div className='about-us-section__text-container'>
                 <Effects
                     duration={0.8}

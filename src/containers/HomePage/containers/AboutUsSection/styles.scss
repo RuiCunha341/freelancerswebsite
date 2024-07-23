@@ -2,17 +2,23 @@
 
 .about-us-section {
     color: $white;
-    margin: 100px 0px;
-    margin-left: 15%;
     overflow: hidden;
+    margin: 100px 0px;
+
+    &__title {
+        margin-bottom: 90px;
+        font-size: 80px;
+        color: $white;
+    }
 
     &__text-container {
+        margin-left: 15%;
         p {
             font-size: 100px;
         }
 
-        p.red{
-            color:$blue;
+        p.red {
+            color: $blue;
         }
     }
 }

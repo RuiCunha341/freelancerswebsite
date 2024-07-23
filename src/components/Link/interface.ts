@@ -1,4 +1,8 @@
 export interface ILink {
+    /** Link text */
     text: string;
-    href: string;
+    /** Link url to redirect */
+    href?: string;
+    /** Section Id to scroll into */
+    sectionId?: string;
 }
