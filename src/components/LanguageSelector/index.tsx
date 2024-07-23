@@ -24,16 +24,6 @@ function LanguageSelector() {
     useClickOutside(dropdownContainerRef, () => setDropdownVisible(false));
 
     useEffect(() => {
-        // Get the current language from the html element
-        const currentLang = document.documentElement.lang;
-
-        if (currentLang === LanguageEnum.Portuguese)
-            setLanguage(LanguageEnum.Portuguese);
-        // default language is EN
-        setLanguage(LanguageEnum.English);
-    }, []);
-
-    useEffect(() => {
         i18n.changeLanguage(language);
     }, [language]);
 

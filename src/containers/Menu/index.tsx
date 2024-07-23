@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import './styles.scss';
 import Button from 'components/Button';
@@ -5,6 +6,7 @@ import LanguageSelector from 'components/LanguageSelector';
 import { useTranslation } from 'react-i18next';
 import Link from 'components/Link';
 import Effects from 'components/Effects';
+import { SectionEnum } from 'enums/sections';
 
 function Menu() {
     const { t } = useTranslation();
@@ -45,7 +47,10 @@ function Menu() {
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
                     <div>
-                        <Link text={t('general.ABOUT_US')} href='/#AboutUs' />
+                        <Link
+                            text={t('general.ABOUT_US')}
+                            sectionId={SectionEnum.AboutUs}
+                        />
                     </div>
                 </Effects>
                 <Effects
@@ -55,9 +60,28 @@ function Menu() {
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
                     <div>
-                        <Link text={t('general.PROJECTS')} href='/' />
+                        <Link
+                            text={t('general.PROJECTS')}
+                            sectionId={SectionEnum.Projects}
+                        />
                     </div>
                 </Effects>
+                {/**
+                 *                 <Effects
+                    duration={0.8}
+                    delay={0.4}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <div>
+                        <Link
+                            text={t('general.SERVICES')}
+                            href='/'
+                            sectionId={SectionEnum.Projects}
+                        />
+                    </div>
+                </Effects>
+                 */}
                 <Effects
                     duration={0.8}
                     delay={0.4}
@@ -65,7 +89,10 @@ function Menu() {
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
                     <div>
-                        <Link text={t('general.SERVICES')} href='/' />
+                        <Link
+                            text={t('general.SERVICES')}
+                            sectionId={SectionEnum.Services}
+                        />
                     </div>
                 </Effects>
                 <Effects

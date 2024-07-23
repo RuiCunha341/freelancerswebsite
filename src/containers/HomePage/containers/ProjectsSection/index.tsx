@@ -4,6 +4,7 @@ import './styles.scss';
 import { useTranslation } from 'react-i18next';
 import ProjectPreview from 'components/ProjectPreview';
 import Effects from 'components/Effects';
+import { SectionEnum } from 'enums/sections';
 import { currentProjects } from './utils';
 
 function ProjectsSection() {
@@ -35,7 +36,7 @@ function ProjectsSection() {
     }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
 
     return (
-        <div className='projects-section-container'>
+        <div className='projects-section-container' id={SectionEnum.Projects}>
             <Effects
                 duration={0.8}
                 triggerOnElementPositionOnScreen={95}
