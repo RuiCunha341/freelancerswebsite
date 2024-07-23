@@ -8,6 +8,7 @@ import Link from 'components/Link';
 import Effects from 'components/Effects';
 import { SectionEnum } from 'enums/sections';
 import classNames from 'classnames';
+import MenuIcon from 'assets/icons/MenuIcon';
 
 function Menu() {
     const { t } = useTranslation();
@@ -69,6 +70,24 @@ function Menu() {
                     </div>
                 </Effects>
             </div>
+            <div className='website-menu__menu-right-side'>
+                <Effects
+                    duration={0.8}
+                    delay={0.2}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <button
+                        type='button'
+                        aria-label='Menu'
+                        onClick={() => {
+                            //
+                        }}
+                    >
+                        <MenuIcon />
+                    </button>
+                </Effects>
+            </div>
             <div className='website-menu__right-side'>
                 <Effects
                     duration={0.8}
@@ -96,22 +115,6 @@ function Menu() {
                         />
                     </div>
                 </Effects>
-                {/**
-                 *                 <Effects
-                    duration={0.8}
-                    delay={0.4}
-                    initialState={{ opacity: 0, positionY: '-200px' }}
-                    finalState={{ opacity: 1, positionY: '0px' }}
-                >
-                    <div>
-                        <Link
-                            text={t('general.SERVICES')}
-                            href='/'
-                            sectionId={SectionEnum.Projects}
-                        />
-                    </div>
-                </Effects>
-                 */}
                 <Effects
                     duration={0.8}
                     delay={0.4}

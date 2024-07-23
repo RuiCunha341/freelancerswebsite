@@ -16,11 +16,11 @@
 
     &.visible {
         transform: translateY(0);
-      }
-    
-      &.hidden {
+    }
+
+    &.hidden {
         transform: translateY(-100%);
-      }
+    }
 
     &__left-side {
         font-size: 30px;
@@ -45,6 +45,40 @@
 
         &__button {
             margin-left: 20px;
+        }
+    }
+
+    &__menu-right-side {
+        display: none;
+        button {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background-color: transparent;
+            svg {
+                width: 30px;
+                height: 30px;
+                path {
+                    fill: $blue;
+                }
+            }
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width: 850px) {
+        &__menu-right-side {
+            display: inherit;
+        }
+
+        &__right-side {
+            display: none;
         }
     }
 }
