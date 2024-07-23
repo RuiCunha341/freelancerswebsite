@@ -1,13 +1,16 @@
+@import '/src/variables';
+
 .button {
-    height: 30px;
+    height: 40px;
     border-radius: 7px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: white;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
-    border: none;
+    background-color: $blue;
+    border: 2px solid $blue;
+    box-shadow: 0px 0px 0px 0px $blue;
 
     &__hidden-text {
         opacity: 0;
@@ -20,7 +23,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         transition: all 0.2s ease-in-out;
-        color: black;
+        color: $black;
         opacity: 1;
     }
 
@@ -31,29 +34,29 @@
         left: 50%;
         transform: translate(-50%, -50%);
         transition: all 0.2s ease-in-out;
-        color: black;
         opacity: 0;
     }
 
     &__default-text.hovering.animateText {
         top: calc(50% - 15px);
-        color: white;
         opacity: 0;
     }
 
     &__hovering-text.hovering.animateText {
         top: 50%;
-        color: white;
+        color: $blue;
         opacity: 1;
     }
 
     &__default-text.hovering {
-        color: white;
+        color: $blue;
         opacity: 1;
     }
 }
 
 .button:hover {
     cursor: pointer;
-    background-color: rgb(145, 0, 0);
+    background-color: $black;
+    border: 2px solid $blue;
+    box-shadow: 0px 0px 10px 0px $blue;
 }
