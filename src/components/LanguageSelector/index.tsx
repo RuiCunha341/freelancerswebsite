@@ -27,6 +27,10 @@ function LanguageSelector() {
         i18n.changeLanguage(language);
     }, [language]);
 
+    useEffect(() => {
+        i18n.changeLanguage(language);
+    }, []);
+
     return (
         <div className='language-selector-container' ref={dropdownContainerRef}>
             <button
