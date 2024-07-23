@@ -21,6 +21,13 @@ function Menu() {
                 </Effects>
                 <Effects
                     duration={0.8}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <span className='website-menu__left-side__separator' />
+                </Effects>
+                <Effects
+                    duration={0.8}
                     delay={0.1}
                     initialState={{ opacity: 0, positionY: '-200px' }}
                     finalState={{ opacity: 1, positionY: '0px' }}
