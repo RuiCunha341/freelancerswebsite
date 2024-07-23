@@ -1,3 +1,5 @@
+@import '/src/variables';
+
 .website-menu {
     width: calc(100% - 80px);
     position: fixed;
@@ -10,6 +12,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    background-color: $blackTransparentBackground;
 
     &__left-side {
         font-size: 30px;
@@ -25,7 +28,7 @@
         justify-content: flex-end;
         gap: 30px;
 
-        &__button{
+        &__button {
             margin-left: 20px;
         }
     }

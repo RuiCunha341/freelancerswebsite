@@ -1,8 +1,10 @@
+@import '/src/variables';
+
 .website-footer {
     width: calc(100% - 80px);
     transition: all 0.5s ease-in-out;
     padding: 20px 40px;
-    color: white;
-    background-color: black;
+    color: $white;
+    background-color: $black;
     font-size: 35px;
 }
