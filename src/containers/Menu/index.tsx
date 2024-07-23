@@ -25,7 +25,9 @@ function Menu() {
                     initialState={{ opacity: 0, positionY: '-200px' }}
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
-                    <LanguageSelector />
+                    <div>
+                        <LanguageSelector />
+                    </div>
                 </Effects>
             </div>
             <div className='website-menu__right-side'>
@@ -35,7 +37,9 @@ function Menu() {
                     initialState={{ opacity: 0, positionY: '-200px' }}
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
-                    <Link text={t('general.ABOUT_US')} href='/#AboutUs' />
+                    <div>
+                        <Link text={t('general.ABOUT_US')} href='/#AboutUs' />
+                    </div>
                 </Effects>
                 <Effects
                     duration={0.8}
@@ -43,7 +47,9 @@ function Menu() {
                     initialState={{ opacity: 0, positionY: '-200px' }}
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
-                    <Link text={t('general.PROJECTS')} href='/' />
+                    <div>
+                        <Link text={t('general.PROJECTS')} href='/' />
+                    </div>
                 </Effects>
                 <Effects
                     duration={0.8}
@@ -51,21 +57,23 @@ function Menu() {
                     initialState={{ opacity: 0, positionY: '-200px' }}
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
-                    <Link text={t('general.SERVICES')} href='/' />
+                    <div>
+                        <Link text={t('general.SERVICES')} href='/' />
+                    </div>
                 </Effects>
-                <div className='website-menu__right-side__button'>
-                    <Effects
-                        duration={0.8}
-                        delay={0.5}
-                        initialState={{ opacity: 0, positionY: '-200px' }}
-                        finalState={{ opacity: 1, positionY: '0px' }}
-                    >
+                <Effects
+                    duration={0.8}
+                    delay={0.5}
+                    initialState={{ opacity: 0, positionY: '-200px' }}
+                    finalState={{ opacity: 1, positionY: '0px' }}
+                >
+                    <div className='website-menu__right-side__button'>
                         <Button
                             text={t('general.CONTACT_US')}
                             animateText={false}
                         />
-                    </Effects>
-                </div>
+                    </div>
+                </Effects>
             </div>
         </div>
     );
