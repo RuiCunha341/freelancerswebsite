@@ -3,6 +3,7 @@ import './styles.scss';
 import Effects from 'components/Effects';
 import { useTranslation } from 'react-i18next';
 import { SectionEnum } from 'enums/sections';
+import Button from 'components/Button';
 import BackgroundImage from '../../../../assets/images/temporary2.webp';
 
 function ServicesSection() {
@@ -40,6 +41,7 @@ function ServicesSection() {
                         <p className='services-section__container__right-side__text'>
                             {t('homePage.INITIAL_SECTION_3')}
                         </p>
+                        <Button text={t('general.CONTACT_US')} />
                     </div>
                 </Effects>
             </div>
