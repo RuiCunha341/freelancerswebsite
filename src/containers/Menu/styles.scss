@@ -6,7 +6,7 @@
     z-index: 999;
     top: 0;
     transition: all 0.5s ease-in-out;
-    padding: 20px 40px 20px;
+    padding: 30px 40px;
     color: white;
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@
             background-color: $white;
             width: 1px;
             height: 25px;
-            margin: 0px 30px;
+            margin: 0px 20px;
         }
     }
 
@@ -51,8 +51,8 @@
     &__menu-right-side {
         display: none;
         button {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
