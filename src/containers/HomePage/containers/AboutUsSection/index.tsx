@@ -73,6 +73,16 @@ function AboutUsSection() {
                         <p className='blue'>{words[wordIndex]}</p>
                     </Effects>
                 )}
+                {wordIndex === 3 && (
+                    <Effects
+                        duration={0.8}
+                        triggerOnElementPositionOnScreen={95}
+                        initialState={{ opacity: 0, positionX: '200px' }}
+                        finalState={{ opacity: 1, positionX: '0px' }}
+                    >
+                        <p className='blue'>{words[wordIndex]}</p>
+                    </Effects>
+                )}
                 <Effects
                     duration={0.8}
                     triggerOnElementPositionOnScreen={95}
