@@ -15,14 +15,16 @@
         "INCREDIBLE":"INCRÍVEIS",
         "SPECIAL":"ESPECIAIS",
         "UNIQUE":"ÚNICOS",
-        "DIGITAL_PRODUCTS":"Produtos Digitais."
+        "DIGITAL_PRODUCTS":"Produtos Digitais.",
+        "WE_CONNECT":"Conectámos e Gerenciámos os Principais Freelancers de Mídia, Oferecendo Resultados Excepcionais em",
+        "NEEDS":"Adaptado às suas necessidades."
     },
     "services":{
         "VIDEOGRAPHY":"Videografia",
         "PHOTOGRAPHY":"Fotografia",
         "VIDEO_EDITING":"Edição de Vídeo",
         "MOTION_GRAPHICS":"Gráficos em Movimento",
-        "VIDEOGRAPHY_DESCRIPTION":"An ossa rede de cinegrafistas qualificados captura a sua visão com visuais impressionantes.",
+        "VIDEOGRAPHY_DESCRIPTION":"A nossa rede de cinegrafistas qualificados captura a sua visão com visuais impressionantes.",
         "PHOTOGRAPHY_DESCRIPTION":"Capture momentos perfeitos com os nossos serviços de fotografia profissional.",
         "VIDEO_EDITING_DESCRIPTION":"Transforme imagens em histórias atraentes com os nossos serviços de edição de vídeo.",
         "MOTION_GRAPHICS_DESCRIPTION":"Dê vida às suas ideias com gráficos em movimento dinâmicos."
