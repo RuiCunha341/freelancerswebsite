@@ -1,0 +1,53 @@
+@import '/src/variables';
+
+.service-container {
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                transition: all 0.2s ease-in-out;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__title {
+        transition: all 0.2s ease-in-out;
+        font-size: 25px;
+        margin: 10px 0px 30px 0px;
+        text-align: center;
+        color: $white;
+    }
+
+    &__description {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+.service-container:hover {
+    cursor: pointer;
+
+    .title{
+        font-size: 35px;
+        color: $blue;
+    }
+
+    .icon-container {
+        transition: all 0.2s ease-in-out;
+
+        svg {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+    }
+}

@@ -19,13 +19,21 @@
         &__text {
             position: relative;
             z-index: 2;
-            color: $white;
-            font-size: 50px;
+            color: $blue;
+            font-size: 65px;
             background-color: $blackTransparentBackground;
         }
 
         &__text:first-child{
             font-size: 75px;
+        }
+
+        &__text:last-child{
+            font-size: 45px;
+        }
+
+        &__text:first-child, &__text:last-child{
+            color: $white;
         }
     }
 
