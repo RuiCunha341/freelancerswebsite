@@ -2,11 +2,24 @@
 
 .projects-section-container {
     margin-top: 100px;
+    overflow: hidden;
 
     &__title {
         margin-bottom: 90px;
         font-size: 80px;
         color: $white;
+    }
+
+    @media (max-width: 1000px) {
+        &__title {
+            font-size: 50px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        &__title {
+            font-size: 30px;
+        }
     }
 
     &__projects {

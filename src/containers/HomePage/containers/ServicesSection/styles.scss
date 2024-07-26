@@ -3,6 +3,7 @@
 .services-section {
     color: $white;
     margin-top: 80px;
+    overflow: hidden;
 
     &__title {
         margin-bottom: 90px;
@@ -10,10 +11,23 @@
         color: $white;
     }
 
+    @media (max-width: 1000px) {
+        &__title {
+            font-size: 50px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        &__title {
+            font-size: 30px;
+        }
+    }
+
     &__services {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 60px;
+        column-gap: 30px;
 
         &__service {
             position: relative;
