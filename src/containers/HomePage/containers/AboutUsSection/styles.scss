@@ -4,14 +4,21 @@
     color: $white;
     overflow: hidden;
     margin: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &__text-container {
+        width: 100%;
+        max-width: 1400px;
         p {
-            font-size: 110px;
+            font-size: 65px;
             text-align: center;
         }
 
         p.blue {
+            margin: 15px 0px;
+            font-size: 95px;
             color: $blue;
         }
     }
