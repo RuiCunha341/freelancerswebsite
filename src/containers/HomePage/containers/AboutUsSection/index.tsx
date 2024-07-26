@@ -21,7 +21,7 @@ function AboutUsSection() {
             t('services.VIDEO_EDITING'),
             t('services.MOTION_GRAPHICS'),
         ]);
-    }, [i18n.language]);
+    }, [i18n.language, t]);
 
     useEffect(() => {
         const interval = setInterval(() => {

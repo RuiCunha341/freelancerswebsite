@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import Effects from 'components/Effects';
 import { useTranslation } from 'react-i18next';
 import BackgroundImage from '../../../../assets/images/temporary.webp';
 
 function InitialSection() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [text, setText] = useState<string[]>([
+        t('homePage.INITIAL_SECTION_1'),
+        t('homePage.INITIAL_SECTION_2'),
+        t('homePage.INITIAL_SECTION_3'),
+    ]);
+
+    useEffect(() => {
+        setText([
+            t('homePage.INITIAL_SECTION_1'),
+            t('homePage.INITIAL_SECTION_2'),
+            t('homePage.INITIAL_SECTION_3'),
+        ]);
+    }, [i18n.language, t]);
 
     return (
         <div className='initial-section'>
@@ -29,7 +42,7 @@ function InitialSection() {
                     finalState={{ opacity: 1, scale: 1 }}
                 >
                     <div className='initial-section__text-container__text'>
-                        {t('homePage.INITIAL_SECTION_1')}
+                        {text[0]}
                     </div>
                 </Effects>
                 <Effects
@@ -39,7 +52,7 @@ function InitialSection() {
                     finalState={{ opacity: 1, scale: 1 }}
                 >
                     <div className='initial-section__text-container__text'>
-                        {t('homePage.INITIAL_SECTION_2')}
+                        {text[1]}
                     </div>
                 </Effects>
                 <Effects
@@ -50,7 +63,7 @@ function InitialSection() {
                     finalState={{ opacity: 1, scale: 1 }}
                 >
                     <div className='initial-section__text-container__text'>
-                        {t('homePage.INITIAL_SECTION_3')}
+                        {text[2]}
                     </div>
                 </Effects>
             </div>
