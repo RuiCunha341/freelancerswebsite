@@ -7,17 +7,19 @@ import { SectionEnum } from 'enums/sections';
 function AboutUsSection() {
     const { t, i18n } = useTranslation();
     const [words, setWords] = useState<string[]>([
-        t('aboutUs.INCREDIBLE'),
-        t('aboutUs.SPECIAL'),
-        t('aboutUs.UNIQUE'),
+        t('services.VIDEOGRAPHY'),
+        t('services.PHOTOGRAPHY'),
+        t('services.VIDEO_EDITING'),
+        t('services.MOTION_GRAPHICS'),
     ]);
     const [wordIndex, setWordIndex] = useState(0);
 
     useEffect(() => {
         setWords([
-            t('aboutUs.INCREDIBLE'),
-            t('aboutUs.SPECIAL'),
-            t('aboutUs.UNIQUE'),
+            t('services.VIDEOGRAPHY'),
+            t('services.PHOTOGRAPHY'),
+            t('services.VIDEO_EDITING'),
+            t('services.MOTION_GRAPHICS'),
         ]);
     }, [i18n.language]);
 
@@ -39,7 +41,7 @@ function AboutUsSection() {
                     initialState={{ opacity: 0, positionX: '-200px' }}
                     finalState={{ opacity: 1, positionX: '0px' }}
                 >
-                    <p>{t('aboutUs.WE_MAKE')}</p>
+                    <p>{t('aboutUs.WE_CONNECT')}</p>
                 </Effects>
                 {wordIndex === 0 && (
                     <Effects
@@ -77,7 +79,7 @@ function AboutUsSection() {
                     initialState={{ opacity: 0, positionX: '-200px' }}
                     finalState={{ opacity: 1, positionX: '0px' }}
                 >
-                    <p>{t('aboutUs.DIGITAL_PRODUCTS')}</p>
+                    <p>{t('aboutUs.NEEDS')}</p>
                 </Effects>
             </div>
         </div>
