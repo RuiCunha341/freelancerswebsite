@@ -6,9 +6,9 @@
         "SERVICES":"Serviços"
     },
     "homePage":{
-        "INITIAL_SECTION_1":"Conectámos e gerenciámos",
+        "INITIAL_SECTION_1":"Conectámos e Gerenciámos",
         "INITIAL_SECTION_2":"Freelancers de Elite",
-        "INITIAL_SECTION_3":"para os seus projetos"
+        "INITIAL_SECTION_3":"para os Seus Projetos"
     },
     "aboutUs":{
         "WE_MAKE":"Nós Fazemos",
@@ -16,6 +16,16 @@
         "SPECIAL":"ESPECIAIS",
         "UNIQUE":"ÚNICOS",
         "DIGITAL_PRODUCTS":"Produtos Digitais."
+    },
+    "services":{
+        "VIDEOGRAPHY":"Videografia",
+        "PHOTOGRAPHY":"Fotografia",
+        "VIDEO_EDITING":"Edição de Vídeo",
+        "MOTION_GRAPHICS":"Gráficos em Movimento",
+        "VIDEOGRAPHY_DESCRIPTION":"An ossa rede de cinegrafistas qualificados captura a sua visão com visuais impressionantes.",
+        "PHOTOGRAPHY_DESCRIPTION":"Capture momentos perfeitos com os nossos serviços de fotografia profissional.",
+        "VIDEO_EDITING_DESCRIPTION":"Transforme imagens em histórias atraentes com os nossos serviços de edição de vídeo.",
+        "MOTION_GRAPHICS_DESCRIPTION":"Dê vida às suas ideias com gráficos em movimento dinâmicos."
     },
     "errors": {
         "0": "Aconteceu um erro, por favor tente mais tarde."

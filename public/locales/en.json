@@ -17,6 +17,16 @@
         "UNIQUE":"UNIQUE",
         "DIGITAL_PRODUCTS":"Digital Products."
     },
+    "services":{
+        "VIDEOGRAPHY":"Videography",
+        "PHOTOGRAPHY":"Photography",
+        "VIDEO_EDITING":"Video Editing",
+        "MOTION_GRAPHICS":"Motion Graphics",
+        "VIDEOGRAPHY_DESCRIPTION":"Our network of skilled videographers captures your vision with stunning visuals.",
+        "PHOTOGRAPHY_DESCRIPTION":"Capture perfect moments with our professional photography services.",
+        "VIDEO_EDITING_DESCRIPTION":"Transform raw footage into compelling stories with our video editing services.",
+        "MOTION_GRAPHICS_DESCRIPTION":"Bring your ideas to life with dynamic motion graphics."
+    },
     "errors": {
         "0": "Aconteceu um erro, por favor tente mais tarde."
     }

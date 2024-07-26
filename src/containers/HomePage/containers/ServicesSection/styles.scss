@@ -10,41 +10,22 @@
         color: $white;
     }
 
-    &__container {
+    &__services {
         display: flex;
         flex-wrap: wrap;
+        gap: 30px;
 
-        &__left-side,
-        &__right-side {
-            flex: 1 1 50%;
-            box-sizing: border-box;
-            padding: 10px;
+        &__service {
+            position: relative;
+            width: calc((100% - 90px) / 4);
 
-            @media (max-width: 1000px) {
-                flex: 1 1 100%;
+            @media (max-width: 800px) {
+                width: calc((100% - 30px) / 2);
             }
-        }
 
-        &__left-side {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-                width: 300px;
-                height: 300px;
-                object-fit: cover;
-                border-radius: 7px;
+            @media (max-width: 500px) {
+                width: 100%;
             }
-        }
-
-        &__right-side {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            flex-direction: column;
-            gap: 20px;
-            font-size: 30px;
         }
     }
 }
