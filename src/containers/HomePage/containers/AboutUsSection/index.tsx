@@ -32,16 +32,6 @@ function AboutUsSection() {
 
     return (
         <div className='about-us-section' id={SectionEnum.AboutUs}>
-            <Effects
-                duration={0.8}
-                triggerOnElementPositionOnScreen={95}
-                initialState={{ opacity: 0, positionX: '-200px' }}
-                finalState={{ opacity: 1, positionX: '0px' }}
-            >
-                <p className='about-us-section__title'>
-                    {t('general.ABOUT_US')}
-                </p>
-            </Effects>
             <div className='about-us-section__text-container'>
                 <Effects
                     duration={0.8}
@@ -58,7 +48,7 @@ function AboutUsSection() {
                         initialState={{ opacity: 0, positionX: '200px' }}
                         finalState={{ opacity: 1, positionX: '0px' }}
                     >
-                        <p className='red'>{words[wordIndex]}</p>
+                        <p className='blue'>{words[wordIndex]}</p>
                     </Effects>
                 )}
                 {wordIndex === 1 && (
@@ -68,7 +58,7 @@ function AboutUsSection() {
                         initialState={{ opacity: 0, positionX: '200px' }}
                         finalState={{ opacity: 1, positionX: '0px' }}
                     >
-                        <p className='red'>{words[wordIndex]}</p>
+                        <p className='blue'>{words[wordIndex]}</p>
                     </Effects>
                 )}
                 {wordIndex === 2 && (
@@ -78,7 +68,7 @@ function AboutUsSection() {
                         initialState={{ opacity: 0, positionX: '200px' }}
                         finalState={{ opacity: 1, positionX: '0px' }}
                     >
-                        <p className='red'>{words[wordIndex]}</p>
+                        <p className='blue'>{words[wordIndex]}</p>
                     </Effects>
                 )}
                 <Effects

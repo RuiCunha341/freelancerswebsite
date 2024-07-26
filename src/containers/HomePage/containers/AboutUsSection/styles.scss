@@ -5,19 +5,13 @@
     overflow: hidden;
     margin: 100px 0px;
 
-    &__title {
-        margin-bottom: 90px;
-        font-size: 80px;
-        color: $white;
-    }
-
     &__text-container {
-        margin-left: 15%;
         p {
-            font-size: 100px;
+            font-size: 110px;
+            text-align: center;
         }
 
-        p.red {
+        p.blue {
             color: $blue;
         }
     }
