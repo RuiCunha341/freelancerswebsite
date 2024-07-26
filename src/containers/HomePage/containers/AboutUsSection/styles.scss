@@ -21,5 +21,30 @@
             font-size: 95px;
             color: $blue;
         }
+
+        @media (max-width: 1250px) {
+            p {
+                font-size: 45px;
+                text-align: center;
+            }
+    
+            p.blue {
+                font-size: 75px;
+                color: $blue;
+            }
+        }
+
+        @media (max-width: 625px) {
+            p {
+                font-size: 25px;
+                text-align: center;
+            }
+    
+            p.blue {
+                margin: 10px 0px;
+                font-size: 45px;
+                color: $blue;
+            }
+        }
     }
 }
