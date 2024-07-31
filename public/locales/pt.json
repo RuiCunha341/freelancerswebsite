@@ -15,6 +15,9 @@
         "WE_CONNECT":"Conectámos e Gerenciámos os Principais Freelancers de Mídia, Oferecendo Resultados Excepcionais em",
         "NEEDS":"Adaptados às suas necessidades."
     },
+    "contactUs":{
+        "TELL_US":"Fala-nos sobre o teu próximo projeto"
+    },
     "services":{
         "VIDEOGRAPHY":"Videografia",
         "PHOTOGRAPHY":"Fotografia",
@@ -24,6 +27,13 @@
         "PHOTOGRAPHY_DESCRIPTION":"Capture momentos perfeitos com os nossos serviços de fotografia profissional.",
         "VIDEO_EDITING_DESCRIPTION":"Transforme imagens em histórias atraentes com os nossos serviços de edição de vídeo.",
         "MOTION_GRAPHICS_DESCRIPTION":"Dê vida às suas ideias com gráficos em movimento dinâmicos."
+    },
+    "form":{
+        "REQUIRED_FIELD": "Campo obrigatório.",
+        "EMAIL_INVALID":"Email inválido.",
+        "NAME":"Nome",
+        "EMAIL":"Email",
+        "PROJECT":"Projeto"
     },
     "errors": {
         "0": "Aconteceu um erro, por favor tente mais tarde."

@@ -42,6 +42,7 @@ html button,
 html p,
 html span,
 html div,
+html input,
 html a {
     font-family: 'CircularStd-Black' !important;
 }
@@ -54,6 +55,7 @@ html button.bold,
 html p.bold,
 html span.bold,
 html div.bold,
+html input.bold,
 html a.bold {
     font-family: 'CircularStd-Black-Bold' !important;
 }
@@ -66,6 +68,7 @@ html button.italic,
 html p.italic,
 html span.italic,
 html div.italic,
+html input.italic,
 html a.italic {
     font-family: 'CircularStd-Black-Italic' !important;
 }
@@ -78,6 +81,7 @@ html button.bold-italic,
 html p.bold-italic,
 html span.bold-italic,
 html div.bold-italic,
+html input.bold-italic,
 html a.bold-italic {
     font-family: 'CircularStd-Black-Bold-Italic' !important;
 }

@@ -3,7 +3,7 @@ import './styles.scss';
 import classNames from 'classnames';
 import { IButton } from './interface';
 
-function Button({ text, animateText = true }: IButton) {
+function Button({ text, animateText = true, onClick }: IButton) {
     const [hovering, setHovering] = useState(false);
 
     return (
@@ -12,6 +12,7 @@ function Button({ text, animateText = true }: IButton) {
             className='button'
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
+            onClick={onClick}
         >
             <span
                 className={classNames('button__default-text bold', {

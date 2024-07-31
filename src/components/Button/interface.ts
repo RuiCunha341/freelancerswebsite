@@ -3,4 +3,6 @@ export interface IButton {
     text: string;
     /** Indicates if the button text should be animated */
     animateText?: boolean;
+    /** Function to be executed when button is clicked */
+    onClick?: () => void;
 }

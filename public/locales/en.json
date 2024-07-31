@@ -15,6 +15,9 @@
         "WE_CONNECT":"We Connect and Manage Top Media Freelancers, Delivering Exceptional",
         "NEEDS":"Tailored to Your Needs."
     },
+    "contactUs":{
+        "TELL_US":"Tell us about your next project"
+    },
     "services":{
         "VIDEOGRAPHY":"Videography",
         "PHOTOGRAPHY":"Photography",
@@ -25,7 +28,14 @@
         "VIDEO_EDITING_DESCRIPTION":"Transform raw footage into compelling stories with our video editing services.",
         "MOTION_GRAPHICS_DESCRIPTION":"Bring your ideas to life with dynamic motion graphics."
     },
+    "form":{
+        "REQUIRED_FIELD": "Required field.",
+        "EMAIL_INVALID":"Invalid email.",
+        "NAME":"Name",
+        "EMAIL":"Email",
+        "PROJECT":"Project"
+    },
     "errors": {
-        "0": "Aconteceu um erro, por favor tente mais tarde."
+        "0": "An error has occurred, please try again later."
     }
 }
