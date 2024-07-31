@@ -9,6 +9,7 @@ import Effects from 'components/Effects';
 import { SectionEnum } from 'enums/sections';
 import classNames from 'classnames';
 import MenuIcon from 'assets/icons/MenuIcon';
+import { scrollToSection } from 'utils/scroll';
 
 function Menu() {
     const { t } = useTranslation();
@@ -138,6 +139,9 @@ function Menu() {
                         <Button
                             text={t('general.CONTACT_US')}
                             animateText={false}
+                            onClick={() =>
+                                scrollToSection(SectionEnum.ContactUs)
+                            }
                         />
                     </div>
                 </Effects>
