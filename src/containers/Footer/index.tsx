@@ -36,7 +36,7 @@ function Footer() {
                 >
                     <div>
                         <Link
-                            text={t('general.PROJECTS')}
+                            text={t('general.WORK')}
                             sectionId={SectionEnum.Projects}
                         />
                     </div>

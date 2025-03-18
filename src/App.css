@@ -8,6 +8,15 @@
 
 /* Regular font */
 @font-face {
+    font-family: 'Circular Std';
+    src: local('Circular Std'),
+        url('./fonts/Circular-std-medium-500.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Regular font */
+@font-face {
     font-family: 'CircularStd-Black';
     src: local('CircularStd-Bold'),
         url('./fonts/CircularStd-Bold.woff') format('woff');
@@ -44,7 +53,7 @@ html span,
 html div,
 html input,
 html a {
-    font-family: 'CircularStd-Black' !important;
+    font-family: 'Circular Std', sans-serif !important;
 }
 
 /* Bold */

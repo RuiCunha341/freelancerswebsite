@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import './App.css';
+import './fonts/Circular-std-medium-500.ttf';
 import './fonts/CircularStd-Black.woff';
 import './fonts/CircularStd-Bold.woff';
 import './fonts/CircularStd-BlackItalic.woff';

@@ -7,6 +7,8 @@ import Input from 'components/Input';
 import { emailRegex } from 'utils/regex';
 import Button from 'components/Button';
 import Effects from 'components/Effects';
+import Lottie from 'lottie-react';
+import animationData from 'assets/animations/animation2.json';
 import { ContactUsRequest } from './interface';
 
 function ContactUsSection() {
@@ -33,8 +35,13 @@ function ContactUsSection() {
         },
     });
 
+    console.log(animationData);
+
     return (
         <div className='contact-us-section' id={SectionEnum.ContactUs}>
+            <div style={{ width: 300, height: 300, backgroundColor: 'red' }}>
+                <Lottie animationData={animationData} loop />
+            </div>
             <div className='contact-us-section__content'>
                 <div className='contact-us-section__content__left-side'>
                     <Effects

@@ -15,7 +15,7 @@ function Button({ text, animateText = true, onClick }: IButton) {
             onClick={onClick}
         >
             <span
-                className={classNames('button__default-text bold', {
+                className={classNames('button__default-text', {
                     hovering,
                     animateText,
                 })}
@@ -23,14 +23,14 @@ function Button({ text, animateText = true, onClick }: IButton) {
                 {text}
             </span>
             <span
-                className={classNames('button__hovering-text bold', {
+                className={classNames('button__hovering-text', {
                     hovering,
                     animateText,
                 })}
             >
                 {text}
             </span>
-            <span className='button__hidden-text bold'>{text}</span>
+            <span className='button__hidden-text'>{text}</span>
         </button>
     );
 }

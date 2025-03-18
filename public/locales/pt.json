@@ -1,14 +1,12 @@
 {
     "general": {
         "CONTACT_US":"Contacte-nos",
-        "ABOUT_US":"Sobre Nós",
-        "PROJECTS":"Projetos",
+        "ABOUT_US":"Sobre",
+        "WORK":"Projetos",
         "SERVICES":"Serviços"
     },
     "homePage":{
-        "INITIAL_SECTION_1":"Conectámos e Gerenciámos",
-        "INITIAL_SECTION_2":"Freelancers de Elite",
-        "INITIAL_SECTION_3":"para os Seus Projetos"
+        "INITIAL_SECTION":"Your idea, we make it"
     },
     "aboutUs":{
         "DIGITAL_PRODUCTS":"Produtos Digitais.",

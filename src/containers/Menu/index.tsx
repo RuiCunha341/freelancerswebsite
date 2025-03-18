@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import Button from 'components/Button';
-import LanguageSelector from 'components/LanguageSelector';
+// import LanguageSelector from 'components/LanguageSelector';
 import { useTranslation } from 'react-i18next';
 import Link from 'components/Link';
 import Effects from 'components/Effects';
@@ -10,6 +10,7 @@ import { SectionEnum } from 'enums/sections';
 import classNames from 'classnames';
 import MenuIcon from 'assets/icons/MenuIcon';
 import { scrollToSection } from 'utils/scroll';
+import LogoImage from '../../assets/images/LogoImage.webp';
 
 function Menu() {
     const { t } = useTranslation();
@@ -51,15 +52,13 @@ function Menu() {
                     initialState={{ opacity: 0, positionY: '-200px' }}
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
-                    <span>Logo</span>
+                    <img
+                        src={LogoImage}
+                        alt='HomePage Background'
+                        className='website-menu__left-side__logo-image'
+                    />
                 </Effects>
-                <Effects
-                    duration={0.8}
-                    initialState={{ opacity: 0, positionY: '-200px' }}
-                    finalState={{ opacity: 1, positionY: '0px' }}
-                >
-                    <span className='website-menu__left-side__separator' />
-                </Effects>
+                {/** 
                 <Effects
                     duration={0.8}
                     delay={0.1}
@@ -70,6 +69,7 @@ function Menu() {
                         <LanguageSelector />
                     </div>
                 </Effects>
+                */}
             </div>
             <div className='website-menu__menu-right-side'>
                 <Effects
@@ -97,10 +97,7 @@ function Menu() {
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
                     <div>
-                        <Link
-                            text={t('general.ABOUT_US')}
-                            sectionId={SectionEnum.AboutUs}
-                        />
+                        <Link text='About' sectionId={SectionEnum.AboutUs} />
                     </div>
                 </Effects>
                 <Effects
@@ -111,8 +108,8 @@ function Menu() {
                 >
                     <div>
                         <Link
-                            text={t('general.PROJECTS')}
-                            sectionId={SectionEnum.Projects}
+                            text='Services'
+                            sectionId={SectionEnum.Services}
                         />
                     </div>
                 </Effects>
@@ -123,10 +120,7 @@ function Menu() {
                     finalState={{ opacity: 1, positionY: '0px' }}
                 >
                     <div>
-                        <Link
-                            text={t('general.SERVICES')}
-                            sectionId={SectionEnum.Services}
-                        />
+                        <Link text='Work' sectionId={SectionEnum.Projects} />
                     </div>
                 </Effects>
                 <Effects
@@ -137,7 +131,7 @@ function Menu() {
                 >
                     <div className='website-menu__right-side__button'>
                         <Button
-                            text={t('general.CONTACT_US')}
+                            text='Contact'
                             animateText={false}
                             onClick={() =>
                                 scrollToSection(SectionEnum.ContactUs)

@@ -44,7 +44,7 @@ function ProjectsSection() {
                 finalState={{ opacity: 1, positionX: '0px' }}
             >
                 <p className='projects-section-container__title'>
-                    {t('general.PROJECTS')}
+                    {t('general.WORK')}
                 </p>
             </Effects>
             <div className='projects-section-container__projects'>
