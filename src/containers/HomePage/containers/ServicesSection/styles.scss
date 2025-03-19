@@ -1,37 +1,25 @@
 @import '/src/variables';
 
 .services-section {
-    color: $white;
-    margin-top: 80px;
+    color: $black;
+    padding: 150px 75px;
     overflow: hidden;
-
-    &__title {
-        margin-bottom: 90px;
-        font-size: 80px;
-        color: $white;
-    }
-
-    @media (max-width: 1000px) {
-        &__title {
-            font-size: 50px;
-        }
-    }
-
-    @media (max-width: 550px) {
-        &__title {
-            font-size: 30px;
-        }
-    }
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &__services {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 60px;
-        column-gap: 30px !important;
+        column-gap: 80px !important;
 
         &__service {
             position: relative;
-            width: calc((100% - 90px) / 4);
+            width: calc((100% - 240px) / 4);
 
             @media (max-width: 800px) {
                 width: calc((100% - 30px) / 2);

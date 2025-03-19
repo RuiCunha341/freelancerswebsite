@@ -2,49 +2,60 @@
 import React from 'react';
 import './styles.scss';
 import Effects from 'components/Effects';
-import { useTranslation } from 'react-i18next';
 import { SectionEnum } from 'enums/sections';
 import { IService } from 'components/Service/interface';
 import Service from 'components/Service';
-import VideographyIcon from 'assets/icons/VideographyIcon';
-import PhotographyIcon from 'assets/icons/PhotographyIcon';
-import VideoEditingIcon from 'assets/icons/VideoEditingIcon';
-import MotionGraphicsIcon from 'assets/icons/MotionGraphicsIcon';
 
 export const currentServices: IService[] = [
     {
-        icon: <VideographyIcon />,
-        service: 'VIDEOGRAPHY',
+        index: '001',
+        title: 'Branding & Identity',
+        description: [
+            'Logo Design',
+            'Identity Buildout',
+            'Naming Ideation',
+            'Creative Direction',
+            'Social Design',
+        ],
     },
     {
-        icon: <PhotographyIcon />,
-        service: 'PHOTOGRAPHY',
+        index: '002',
+        title: 'Web / App / Platform',
+        description: [
+            'Concept to Design',
+            'Full-stack Development',
+            'UI/UX Design',
+            'Deployment & Infrastructure',
+            'Product Ideation',
+        ],
     },
     {
-        icon: <VideoEditingIcon />,
-        service: 'VIDEO_EDITING',
+        index: '003',
+        title: 'Post-Production',
+        description: [
+            'Marketing Videos',
+            'Television Commercials',
+            'Documentaries',
+            'Product Demos',
+            'Short Films',
+        ],
     },
     {
-        icon: <MotionGraphicsIcon />,
-        service: 'MOTION_GRAPHICS',
+        index: '004',
+        title: 'Animation / VFX',
+        description: [
+            '2D Animation',
+            '3D Animation',
+            'Mixed Media',
+            'Live Action',
+            'Compositing',
+        ],
     },
 ];
 
 function ServicesSection() {
-    const { t } = useTranslation();
-
     return (
         <div className='services-section' id={SectionEnum.Services}>
-            <Effects
-                duration={0.8}
-                triggerOnElementPositionOnScreen={95}
-                initialState={{ opacity: 0, positionX: '-200px' }}
-                finalState={{ opacity: 1, positionX: '0px' }}
-            >
-                <p className='services-section__title'>
-                    {t('general.SERVICES')}
-                </p>
-            </Effects>
             <div className='services-section__services'>
                 {currentServices.map((service, index) => (
                     <Effects
@@ -57,8 +68,9 @@ function ServicesSection() {
                         <div className='services-section__services__service'>
                             <Service
                                 key={index}
-                                icon={service.icon}
-                                service={service.service}
+                                index={service.index}
+                                title={service.title}
+                                description={service.description}
                             />
                         </div>
                     </Effects>

@@ -1,6 +1,8 @@
 export interface IService {
-    /** Service icon */
-    icon: JSX.Element;
-    /** Service unique string translation */
-    service: string;
+    /** Service index */
+    index: string;
+    /** Service title */
+    title: string;
+    /** Service description */
+    description: string[];
 }

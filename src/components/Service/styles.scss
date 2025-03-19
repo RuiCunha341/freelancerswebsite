@@ -1,53 +1,41 @@
 @import '/src/variables';
 
 .service-container {
-    &__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    border-left: 1px solid $black;
+    padding-left: 18px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 
-        & > div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            svg {
-                transition: all 0.2s ease-in-out;
-                width: 100px;
-                height: 100px;
-                object-fit: cover;
-            }
+    &__index {
+        margin-bottom: 100px;
+        font-size: 20px;
+    }
+
+    &__content {
+        &__title {
+            transition: all 0.2s ease-in-out;
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: $black;
         }
-    }
 
-    &__title {
-        transition: all 0.2s ease-in-out;
-        font-size: 25px;
-        margin: 10px 0px 30px 0px;
-        text-align: center;
-        color: $white;
-    }
-
-    &__description {
-        font-size: 15px;
-        text-align: center;
+        &__description {
+            color: $black;
+            font-size: 16px;
+            border-bottom: 1px dotted $black;
+            padding-bottom: 7px;
+            margin-bottom: 7px;
+        }
     }
 }
 
 .service-container:hover {
     cursor: pointer;
 
-    .title{
-        font-size: 35px;
-        color: $blue;
-    }
-
-    .icon-container {
-        transition: all 0.2s ease-in-out;
-
-        svg {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-        }
+    .title {
+        font-size: 25px;
     }
 }
