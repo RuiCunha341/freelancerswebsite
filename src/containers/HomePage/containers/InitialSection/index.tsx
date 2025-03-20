@@ -1,19 +1,16 @@
 import React from 'react';
 import './styles.scss';
 import Effects from 'components/Effects';
-import { useTranslation } from 'react-i18next';
 import NewBackgroundImage from '../../../../assets/images/IntroImage.webp';
 
 function InitialSection() {
-    const { t } = useTranslation();
-
     return (
         <div className='initial-section'>
             <Effects
                 duration={0.8}
                 delay={0.1}
                 initialState={{ opacity: 0 }}
-                finalState={{ opacity: 1 }}
+                finalState={{ opacity: 0.8 }}
             >
                 <img
                     src={NewBackgroundImage}

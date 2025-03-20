@@ -3,10 +3,11 @@
 .about-us-section {
     color: $white;
     overflow: hidden;
-    margin: 100px 0px 140px;
+    padding: $normalSectionPadding 0px 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: calc(100vh - $normalSectionPadding - 100px);
 
     &__text-container {
         width: 100%;

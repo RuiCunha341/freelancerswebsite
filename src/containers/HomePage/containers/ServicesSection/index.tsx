@@ -56,26 +56,24 @@ export const currentServices: IService[] = [
 function ServicesSection() {
     return (
         <div className='services-section' id={SectionEnum.Services}>
-            <div className='services-section__services'>
-                {currentServices.map((service, index) => (
-                    <Effects
-                        duration={0.8}
-                        delay={index / 10}
-                        triggerOnElementPositionOnScreen={95}
-                        initialState={{ opacity: 0, scale: 0.5 }}
-                        finalState={{ opacity: 1, scale: 1 }}
-                    >
-                        <div className='services-section__services__service'>
-                            <Service
-                                key={index}
-                                index={service.index}
-                                title={service.title}
-                                description={service.description}
-                            />
-                        </div>
-                    </Effects>
-                ))}
-            </div>
+            {currentServices.map((service, index) => (
+                <Effects
+                    duration={0.8}
+                    delay={index / 10}
+                    triggerOnScrollPosition={1300}
+                    initialState={{ opacity: 0, scale: 0.5 }}
+                    finalState={{ opacity: 1, scale: 1 }}
+                >
+                    <div className='services-section__service'>
+                        <Service
+                            key={index}
+                            index={service.index}
+                            title={service.title}
+                            description={service.description}
+                        />
+                    </div>
+                </Effects>
+            ))}
         </div>
     );
 }

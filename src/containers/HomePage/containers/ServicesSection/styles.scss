@@ -2,32 +2,28 @@
 
 .services-section {
     color: $black;
-    padding: 150px 75px;
+    padding: 150px $normalSectionPadding;
     overflow: hidden;
     background-color: $white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: calc(100vh - 300px);
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px !important;
 
-    &__services {
-        width: 100%;
+    &__service {
+        position: relative;
+        width: calc((100% - 240px - 150px) / 4);
         height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 60px;
-        column-gap: 80px !important;
 
-        &__service {
-            position: relative;
-            width: calc((100% - 240px) / 4);
+        @media (max-width: 800px) {
+            width: calc((100% - 30px) / 2);
+        }
 
-            @media (max-width: 800px) {
-                width: calc((100% - 30px) / 2);
-            }
-
-            @media (max-width: 500px) {
-                width: 100%;
-            }
+        @media (max-width: 500px) {
+            width: 100%;
         }
     }
 }
