@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 
-/src/assets/projects
+src/assets/projects/DoubleBarrelingPoker_V3.mp4
 
 # testing
 /coverage
