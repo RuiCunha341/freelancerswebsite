@@ -1,14 +1,12 @@
 {
     "general": {
         "CONTACT_US":"Contact Us",
-        "ABOUT_US":"About Us",
-        "PROJECTS":"Projects",
+        "ABOUT_US":"About",
+        "WORK":"Work",
         "SERVICES":"Services"
     },
     "homePage":{
-        "INITIAL_SECTION_1":"Connecting and Managing",
-        "INITIAL_SECTION_2":"Elite Freelancers",
-        "INITIAL_SECTION_3":"for Your Projects"
+        "INITIAL_SECTION":"Your idea, we make it"
     },
     "aboutUs":{
         "DIGITAL_PRODUCTS":"Digital Products.",
