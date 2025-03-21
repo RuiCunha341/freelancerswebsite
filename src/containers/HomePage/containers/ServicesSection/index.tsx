@@ -1,10 +1,9 @@
-/* eslint-disable react/no-array-index-key */
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './styles.scss';
-import Effects from 'components/Effects';
 import { SectionEnum } from 'enums/sections';
 import { IService } from 'components/Service/interface';
 import Service from 'components/Service';
+import useElementOnScreen from 'hooks/useElementOnScreen';
 
 export const currentServices: IService[] = [
     {
@@ -54,25 +53,34 @@ export const currentServices: IService[] = [
 ];
 
 function ServicesSection() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const triggered = useElementOnScreen(sectionRef, 10, false);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        if (triggered && !visible) setVisible(true);
+    }, [triggered]);
+
     return (
-        <div className='services-section' id={SectionEnum.Services}>
+        <div
+            className='services-section'
+            id={SectionEnum.Services}
+            ref={sectionRef}
+        >
             {currentServices.map((service, index) => (
-                <Effects
-                    duration={0.8}
-                    delay={index / 10}
-                    triggerOnScrollPosition={1300}
-                    initialState={{ opacity: 0, scale: 0.5 }}
-                    finalState={{ opacity: 1, scale: 1 }}
+                <div
+                    className={`services-section__service ${
+                        visible ? 'visible' : ''
+                    }`}
                 >
-                    <div className='services-section__service'>
-                        <Service
-                            key={index}
-                            index={service.index}
-                            title={service.title}
-                            description={service.description}
-                        />
-                    </div>
-                </Effects>
+                    <Service
+                        // eslint-disable-next-line react/no-array-index-key
+                        key={index}
+                        index={service.index}
+                        title={service.title}
+                        description={service.description}
+                    />
+                </div>
             ))}
         </div>
     );

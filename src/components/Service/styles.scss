@@ -28,6 +28,19 @@
             border-bottom: 1px dotted $black;
             padding-bottom: 7px;
             margin-bottom: 7px;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        &__description.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @for $i from 1 through 10 {
+            &__description:nth-child(#{$i}) {
+                transition: all 0.8s #{$i / 10}s;
+            }
         }
     }
 }

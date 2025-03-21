@@ -1,38 +1,45 @@
-/* eslint-disable react/no-danger */
-/* eslint-disable react/no-array-index-key */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './styles.scss';
-import Effects from 'components/Effects';
 import { SectionEnum } from 'enums/sections';
+import useElementOnScreen from 'hooks/useElementOnScreen';
 
 function AboutUsSection() {
-    const [text, setText] = useState<string[]>([]);
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const triggered = useElementOnScreen(sectionRef, 0, false);
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        setText([
-            'First impressions set the',
-            'tone—make sure you',
-            'leave a <span>lasting</span> impact.',
-        ]);
-    }, []);
+        if (triggered && !visible) setVisible(true);
+    }, [triggered]);
 
     return (
-        <div className='about-us-section' id={SectionEnum.AboutUs}>
+        <div
+            className='about-us-section'
+            id={SectionEnum.AboutUs}
+            ref={sectionRef}
+        >
             <div className='about-us-section__text-container'>
-                {text.map((phrase, index) => (
-                    <Effects
-                        duration={0.8}
-                        delay={index / 5}
-                        triggerOnScrollPosition={500}
-                        initialState={{ opacity: 0, positionX: '-200px' }}
-                        finalState={{ opacity: 1, positionX: '0px' }}
-                    >
-                        <p
-                            key={index}
-                            dangerouslySetInnerHTML={{ __html: phrase }}
-                        />
-                    </Effects>
-                ))}
+                <p
+                    className={`about-us-section__text-container__text ${
+                        visible ? 'visible' : ''
+                    }`}
+                >
+                    First impressions set the
+                </p>
+                <p
+                    className={`about-us-section__text-container__text ${
+                        visible ? 'visible' : ''
+                    }`}
+                >
+                    tone—make sure you
+                </p>
+                <p
+                    className={`about-us-section__text-container__text ${
+                        visible ? 'visible' : ''
+                    }`}
+                >
+                    leave a <span>lasting</span> impact.
+                </p>
             </div>
         </div>
     );

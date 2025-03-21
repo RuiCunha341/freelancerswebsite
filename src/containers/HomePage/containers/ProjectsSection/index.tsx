@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './styles.scss';
 import { useTranslation } from 'react-i18next';
 import ProjectPreview from 'components/ProjectPreview';
-import Effects from 'components/Effects';
+// import Effects from 'components/Effects';
 import { SectionEnum } from 'enums/sections';
 import { currentProjects } from './utils';
 
@@ -37,16 +37,9 @@ function ProjectsSection() {
 
     return (
         <div className='projects-section-container' id={SectionEnum.Projects}>
-            <Effects
-                duration={0.8}
-                triggerOnElementPositionOnScreen={95}
-                initialState={{ opacity: 0, positionX: '-200px' }}
-                finalState={{ opacity: 1, positionX: '0px' }}
-            >
-                <p className='projects-section-container__title'>
-                    {t('general.WORK')}
-                </p>
-            </Effects>
+            <p className='projects-section-container__title'>
+                {t('general.WORK')}
+            </p>
             <div className='projects-section-container__projects'>
                 {currentProjects.map((project, index) => (
                     <div
@@ -55,22 +48,11 @@ function ProjectsSection() {
                         ref={index === 0 ? containerRef : undefined}
                         key={index}
                     >
-                        <Effects
-                            duration={0.8}
-                            delay={index / 10}
-                            triggerOnElementPositionOnScreen={95}
-                            initialState={{ opacity: 0, scale: 0.5 }}
-                            finalState={{ opacity: 1, scale: 1 }}
-                            key={index}
-                        >
-                            <div>
-                                <ProjectPreview
-                                    image={project.image}
-                                    preview={project.preview}
-                                    title={project.title}
-                                />
-                            </div>
-                        </Effects>
+                        <ProjectPreview
+                            image={project.image}
+                            preview={project.preview}
+                            title={project.title}
+                        />
                     </div>
                 ))}
             </div>

@@ -16,6 +16,12 @@
         width: 100%;
         object-fit: cover;
         z-index: 1;
+        opacity: 0;
+        transition: all 0.8s;
+    }
+
+    &__background-image.visible{
+        opacity: 0.4;
     }
 
     &__title{
@@ -25,6 +31,14 @@
         margin-bottom: 140px;
         z-index: 2;
         position: relative;
+        transition: all 0.8s;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    &__title.visible{
+        opacity: 1;
+        transform: scale(1);
     }
 
     &__content {
@@ -38,10 +52,47 @@
 
         &__left-side {
             width: calc(65% - (35px / 2));
+
+            &__text{
+                transition: all 0.8s;
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            &__text.visible{
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         &__right-side {
             width: calc(35% - (35px / 2));
+
+            &__field-container{
+                opacity: 0;
+                transform: translate3d(200px, 0px, 0px);
+            }
+
+            &__field-container.visible{
+                opacity: 1;
+                transform: translate3d(0px, 0px, 0px);
+            }
+
+            &__field-container:nth-child(1) {
+                transition: all 0.8s;
+            }
+    
+            &__field-container:nth-child(2) {
+                transition: all 0.8s 0.1s;
+            }
+    
+            &__field-container:nth-child(3) {
+                transition: all 0.8s 0.2s;
+            }
+
+            &__field-container:nth-child(4) {
+                transition: all 0.8s 0.3s;
+            }
         }
 
         &__right-side {
@@ -61,6 +112,17 @@
                 display: flex;
                 align-items: flex-start;
                 justify-content: flex-start;
+
+                &__button-container{
+                    transition: all 0.8s 0.4s;
+                    opacity: 0;
+                    transform: translate3d(0px, 200px, 0px);
+                }
+
+                &__button-container.visible{
+                    opacity: 1;
+                    transform: translate3d(0px, 0px, 0px);
+                }
             }
         }
 

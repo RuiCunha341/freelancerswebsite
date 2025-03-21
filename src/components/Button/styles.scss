@@ -44,19 +44,18 @@
 
     &__hovering-text.hovering.animateText {
         top: 50%;
-        color: $blue;
+        color: $buttonGrey;
         opacity: 1;
     }
 
     &__default-text.hovering {
-        color: $blue;
+        color: $buttonGrey;
         opacity: 1;
     }
 }
 
 .button:hover {
     cursor: pointer;
-    background-color: $black;
-    border: 2px solid $blue;
-    box-shadow: 0px 0px 10px 0px $blue;
+    background-color: transparent;
+    border: 2px solid $buttonGrey;
 }
