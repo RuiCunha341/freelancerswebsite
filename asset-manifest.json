@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/freelancerswebsite/static/css/main.216087e2.css",
-    "main.js": "/freelancerswebsite/static/js/main.953d412b.js",
+    "main.css": "/freelancerswebsite/static/css/main.175e8ad2.css",
+    "main.js": "/freelancerswebsite/static/js/main.ea533987.js",
     "static/js/453.cda58dff.chunk.js": "/freelancerswebsite/static/js/453.cda58dff.chunk.js",
-    "static/media/IntroImage.webp": "/freelancerswebsite/static/media/IntroImage.e57b4ded7a7be3dd1ad7.webp",
     "static/media/temporary3.gif": "/freelancerswebsite/static/media/temporary3.0b1960c23a5761dfa082.gif",
+    "static/media/IntroImage1920.webp": "/freelancerswebsite/static/media/IntroImage1920.b46928dda6916d8c37bb.webp",
     "static/media/ContactUsImage.webp": "/freelancerswebsite/static/media/ContactUsImage.9670c2dc592153361166.webp",
+    "static/media/IntroImage1600.webp": "/freelancerswebsite/static/media/IntroImage1600.d571ba77c7d26351a4a7.webp",
+    "static/media/IntroImage1024.webp": "/freelancerswebsite/static/media/IntroImage1024.a42b609bebb610821b35.webp",
     "static/media/Circular-std-medium-500.ttf": "/freelancerswebsite/static/media/Circular-std-medium-500.3fcb6535e39024a69e30.ttf",
     "static/media/temporary2.webp": "/freelancerswebsite/static/media/temporary2.176902c5d3be14f20deb.webp",
     "static/media/CircularStd-BlackItalic.woff": "/freelancerswebsite/static/media/CircularStd-BlackItalic.160610ae8205f5c66ae5.woff",
@@ -16,12 +18,12 @@
     "static/media/LogoImage.webp": "/freelancerswebsite/static/media/LogoImage.d018c5cb4394cfc250be.webp",
     "index.html": "/freelancerswebsite/index.html",
     "static/media/getFetch.cjs": "/freelancerswebsite/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.216087e2.css.map": "/freelancerswebsite/static/css/main.216087e2.css.map",
-    "main.953d412b.js.map": "/freelancerswebsite/static/js/main.953d412b.js.map",
+    "main.175e8ad2.css.map": "/freelancerswebsite/static/css/main.175e8ad2.css.map",
+    "main.ea533987.js.map": "/freelancerswebsite/static/js/main.ea533987.js.map",
     "453.cda58dff.chunk.js.map": "/freelancerswebsite/static/js/453.cda58dff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.216087e2.css",
-    "static/js/main.953d412b.js"
+    "static/css/main.175e8ad2.css",
+    "static/js/main.ea533987.js"
   ]
 }
