@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './styles.scss';
 import { SectionEnum } from 'enums/sections';
-import { useTranslation } from 'react-i18next';
 import { useForm } from 'hooks/Forms';
 import Input from 'components/Input';
 import { emailRegex } from 'utils/regex';
@@ -9,21 +8,26 @@ import Button from 'components/Button';
 import useElementOnScreen from 'hooks/useElementOnScreen';
 // import Lottie from 'lottie-react';
 // import animationData from 'assets/animations/animation2.json';
-import BackgroundImage from '../../../../assets/images/ContactUsImage.webp';
+import TextArea from 'components/TextArea';
+import BackgroundImage1920 from '../../../../assets/images/ContactUsImage1920.webp';
+import BackgroundImage1600 from '../../../../assets/images/ContactUsImage1600.webp';
+import BackgroundImage1024 from '../../../../assets/images/ContactUsImage1024.webp';
+import LogoImage from '../../../../assets/images/LogoImage.webp';
 import { ContactUsRequest } from './interface';
 
 function ContactUsSection() {
-    const { t } = useTranslation();
     // indicates if currently awaiting submission response
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [loading, setLoading] = useState(false);
+    const [triedToSubmit, setTriedToSubmit] = useState(false);
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggered = useElementOnScreen(sectionRef, 0, false);
     const [visible, setVisible] = useState(false);
     // form logic
-    const { register } = useForm<ContactUsRequest>({
+    const { register, submit, form, hasChanges } = useForm<ContactUsRequest>({
         url: '',
         onSuccess: () => {
+            console.log('SUBMITTED');
             /*
                 toast.success({
                     message: t(
@@ -36,6 +40,7 @@ function ContactUsSection() {
             setLoading(false);
         },
         onError: () => {
+            console.log('SUBMITTED');
             setLoading(false);
         },
     });
@@ -51,8 +56,10 @@ function ContactUsSection() {
             ref={sectionRef}
         >
             <img
-                src={BackgroundImage}
-                alt='ContactUs Background'
+                loading='lazy' // loads only when visible
+                src={BackgroundImage1920}
+                srcSet={`${BackgroundImage1024} 1024w, ${BackgroundImage1600} 1600w, ${BackgroundImage1920} 1920w`} // loads the correct image based on devide width
+                alt='HomePage Background'
                 className={`contact-us-section__background-image ${
                     visible ? 'visible' : ''
                 }`}
@@ -70,13 +77,30 @@ function ContactUsSection() {
             </div> */}
             <div className='contact-us-section__content'>
                 <div className='contact-us-section__content__left-side'>
-                    <p
-                        className={`contact-us-section__content__left-side__text ${
+                    <img
+                        src={LogoImage}
+                        alt='HomePage Background'
+                        className={`contact-us-section__content__left-side__logo ${
+                            visible ? 'visible' : ''
+                        }`}
+                    />
+                    <div
+                        className={`contact-us-section__content__left-side__text-container ${
                             visible ? 'visible' : ''
                         }`}
                     >
-                        {t('contactUs.TELL_US')}
-                    </p>
+                        <p className='contact-us-section__content__left-side__text-container__title'>
+                            Contact
+                        </p>
+                        <p className='contact-us-section__content__left-side__text-container__text'>
+                            <a href='mailto:tomas.sequeira@vistira.com'>
+                                tomas.sequeira@vistira.com
+                            </a>
+                        </p>
+                        <p className='contact-us-section__content__left-side__text-container__text'>
+                            <a href='tel:+351930423557'>+351 930423557</a>
+                        </p>
+                    </div>
                 </div>
                 <div className='contact-us-section__content__right-side'>
                     <div
@@ -86,10 +110,13 @@ function ContactUsSection() {
                     >
                         <Input
                             placeholder='Name'
-                            {...register('name', {
-                                $required: true,
-                                resolveError: () => t('form.REQUIRED_FIELD'),
-                            })}
+                            {...register('name')}
+                            $error={
+                                triedToSubmit &&
+                                (form.name === undefined || form.name === ''
+                                    ? '* Required field'
+                                    : undefined)
+                            }
                         />
                     </div>
                     <div
@@ -99,11 +126,14 @@ function ContactUsSection() {
                     >
                         <Input
                             placeholder='Company'
-                            {...register('email', {
-                                regex: emailRegex,
-                                $required: true,
-                                resolveError: () => t('form.EMAIL_INVALID'),
-                            })}
+                            {...register('company')}
+                            $error={
+                                triedToSubmit &&
+                                (form.company === undefined ||
+                                form.company === ''
+                                    ? '* Required field'
+                                    : undefined)
+                            }
                         />
                     </div>
                     <div
@@ -113,11 +143,15 @@ function ContactUsSection() {
                     >
                         <Input
                             placeholder='Email'
-                            {...register('email', {
-                                regex: emailRegex,
-                                $required: true,
-                                resolveError: () => t('form.EMAIL_INVALID'),
-                            })}
+                            {...register('email')}
+                            $error={
+                                triedToSubmit &&
+                                (form.email === undefined ||
+                                form.email === '' ||
+                                !emailRegex.test(form.email)
+                                    ? '* Required field'
+                                    : undefined)
+                            }
                         />
                     </div>
                     <div
@@ -125,12 +159,16 @@ function ContactUsSection() {
                             visible ? 'visible' : ''
                         }`}
                     >
-                        <Input
+                        <TextArea
                             placeholder='Project'
-                            {...register('project', {
-                                $required: true,
-                                resolveError: () => t('form.REQUIRED_FIELD'),
-                            })}
+                            {...register('project')}
+                            $error={
+                                triedToSubmit &&
+                                (form.project === undefined ||
+                                form.project === ''
+                                    ? '* Required field'
+                                    : undefined)
+                            }
                         />
                     </div>
                     <div className='contact-us-section__content__right-side__footer'>
@@ -142,8 +180,22 @@ function ContactUsSection() {
                             <Button
                                 text='Send Message'
                                 onClick={() => {
-                                    //
+                                    setTriedToSubmit(true);
+                                    // submit();
                                 }}
+                                disabled={
+                                    !loading &&
+                                    hasChanges &&
+                                    (form.name === undefined ||
+                                        form.name === '' ||
+                                        form.company === undefined ||
+                                        form.company === '' ||
+                                        !form.email ||
+                                        form.email === '' ||
+                                        !emailRegex.test(form.email) ||
+                                        form.project === undefined ||
+                                        form.project === '')
+                                }
                             />
                         </div>
                     </div>

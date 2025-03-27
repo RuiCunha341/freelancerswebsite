@@ -18,7 +18,6 @@ function InitialSection() {
         <div className='initial-section'>
             <img
                 loading='lazy' // loads only when visible
-                fetchPriority='high' // faster load if image is an important asset
                 src={BackgroundImage1920}
                 srcSet={`${BackgroundImage1024} 1024w, ${BackgroundImage1600} 1600w, ${BackgroundImage1920} 1920w`} // loads the correct image based on devide width
                 alt='HomePage Background'

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useEffect, useRef, useState } from 'react';
 import './styles.scss';
 import { SectionEnum } from 'enums/sections';
@@ -72,6 +73,7 @@ function ServicesSection() {
                     className={`services-section__service ${
                         visible ? 'visible' : ''
                     }`}
+                    key={index}
                 >
                     <Service
                         // eslint-disable-next-line react/no-array-index-key

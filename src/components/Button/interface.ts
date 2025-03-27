@@ -5,4 +5,6 @@ export interface IButton {
     animateText?: boolean;
     /** Function to be executed when button is clicked */
     onClick?: () => void;
+    /** Indicates if the button is disabled */
+    disabled?: boolean;
 }

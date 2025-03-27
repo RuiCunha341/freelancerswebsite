@@ -39,7 +39,7 @@
 
         @for $i from 1 through 10 {
             &__description:nth-child(#{$i}) {
-                transition: all 0.8s #{$i / 10}s;
+                transition: all 0.8s #{$i / 10}s ease-in-out;
             }
         }
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.scss';
-import { InputProps } from './interface';
+import { TextAreaProps } from './interface';
 
-function Input({
+function TextArea({
     placeholder,
     disabled,
     onChange,
@@ -11,11 +11,11 @@ function Input({
     readonly,
     $error,
     $required,
-}: InputProps) {
+}: TextAreaProps) {
     return (
-        <div className='input'>
-            <input
-                className='input__field'
+        <div className='text-area'>
+            <textarea
+                className='text-area__field'
                 placeholder={placeholder}
                 value={value || ''}
                 disabled={disabled || readonly}
@@ -25,13 +25,14 @@ function Input({
                 onChange={
                     onChange ? ev => onChange(ev.target.value) : undefined
                 }
+                rows={4}
                 autoComplete='off'
             />
             {$error && typeof $error === 'string' && (
-                <p className='input__message'>{$error}</p>
+                <p className='text-area__message'>{$error}</p>
             )}
         </div>
     );
 }
 
-export default Input;
+export default TextArea;

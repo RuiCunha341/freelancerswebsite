@@ -52,6 +52,9 @@ html p,
 html span,
 html div,
 html input,
+html input::placeholder,
+html textarea,
+html textarea::placeholder,
 html a {
     font-family: 'Circular Std', sans-serif !important;
 }
@@ -65,6 +68,7 @@ html p.bold,
 html span.bold,
 html div.bold,
 html input.bold,
+html textarea.bold,
 html a.bold {
     font-family: 'CircularStd-Black-Bold' !important;
 }
@@ -78,6 +82,7 @@ html p.italic,
 html span.italic,
 html div.italic,
 html input.italic,
+html textarea.italic,
 html a.italic {
     font-family: 'CircularStd-Black-Italic' !important;
 }
@@ -91,6 +96,7 @@ html p.bold-italic,
 html span.bold-italic,
 html div.bold-italic,
 html input.bold-italic,
+html textarea.bold-italic,
 html a.bold-italic {
     font-family: 'CircularStd-Black-Bold-Italic' !important;
 }

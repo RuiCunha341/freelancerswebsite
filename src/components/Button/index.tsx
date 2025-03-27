@@ -3,16 +3,24 @@ import './styles.scss';
 import classNames from 'classnames';
 import { IButton } from './interface';
 
-function Button({ text, animateText = true, onClick }: IButton) {
+function Button({
+    text,
+    animateText = true,
+    disabled = false,
+    onClick,
+}: IButton) {
     const [hovering, setHovering] = useState(false);
 
     return (
         <button
             type='button'
-            className='button'
+            className={classNames('button', {
+                disabled,
+            })}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            onClick={onClick}
+            onClick={!disabled ? onClick : undefined}
+            disabled={disabled}
         >
             <span
                 className={classNames('button__default-text', {

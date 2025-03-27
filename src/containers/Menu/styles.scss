@@ -31,7 +31,7 @@
 
         &__logo-image {
             width: 131px;
-            transition: all 0.8s 0.1s;
+            transition: all 0.8s 0.1s ease-in-out;
             opacity: 0;
             transform: translate3d(0px, -200px, 0px);
         }
@@ -59,19 +59,19 @@
         }
 
         &__link-container:nth-child(1) {
-            transition: all 0.8s 0.2s;
+            transition: all 0.8s 0.2s ease-in-out;
         }
 
         &__link-container:nth-child(2) {
-            transition: all 0.8s 0.3s;
+            transition: all 0.8s 0.3s ease-in-out;
         }
 
         &__link-container:nth-child(3) {
-            transition: all 0.8s 0.4s;
+            transition: all 0.8s 0.4s ease-in-out;
         }
 
         &__button-container {
-            transition: all 0.8s 0.6s;
+            transition: all 0.8s 0.6s ease-in-out;
         }
 
         &__link-container.visible,
@@ -84,7 +84,7 @@
     &__hamburguer-menu-container {
         opacity: 0;
         transform: translate3d(0px, -200px, 0px);
-        transition: all 0.8s 0.2s;
+        transition: all 0.8s 0.2s ease-in-out;
         button {
             width: 45px;
             height: 45px;
@@ -97,7 +97,7 @@
                 width: 30px;
                 height: 30px;
                 path {
-                    fill: $blue;
+                    fill: $white;
                 }
             }
         }
