@@ -11,8 +11,8 @@ function HomePage() {
         <div className='home-page'>
             <InitialSection />
             <AboutUsSection />
-            <ServicesSection />
             <ProjectsSection />
+            <ServicesSection />
             <ContactUsSection />
         </div>
     );

@@ -85,7 +85,6 @@
         opacity: 0;
         transform: translate3d(0px, -200px, 0px);
         transition: all 0.8s 0.2s;
-        display: none;
         button {
             width: 45px;
             height: 45px;
@@ -111,15 +110,5 @@
     &__hamburguer-menu-container.visible {
         opacity: 1;
         transform: translate3d(0px, 0px, 0px);
-    }
-
-    @media (max-width: 850px) {
-        &__hamburguer-menu-container {
-            display: inherit;
-        }
-
-        &__right-side {
-            display: none;
-        }
     }
 }

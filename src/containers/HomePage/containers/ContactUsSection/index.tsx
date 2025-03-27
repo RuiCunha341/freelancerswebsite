@@ -85,7 +85,7 @@ function ContactUsSection() {
                         }`}
                     >
                         <Input
-                            placeholder='Your name'
+                            placeholder='Name'
                             {...register('name', {
                                 $required: true,
                                 resolveError: () => t('form.REQUIRED_FIELD'),
@@ -98,7 +98,7 @@ function ContactUsSection() {
                         }`}
                     >
                         <Input
-                            placeholder='Your company'
+                            placeholder='Company'
                             {...register('email', {
                                 regex: emailRegex,
                                 $required: true,
@@ -112,7 +112,7 @@ function ContactUsSection() {
                         }`}
                     >
                         <Input
-                            placeholder='Your email'
+                            placeholder='Email'
                             {...register('email', {
                                 regex: emailRegex,
                                 $required: true,
@@ -126,7 +126,7 @@ function ContactUsSection() {
                         }`}
                     >
                         <Input
-                            placeholder='Your project'
+                            placeholder='Project'
                             {...register('project', {
                                 $required: true,
                                 resolveError: () => t('form.REQUIRED_FIELD'),

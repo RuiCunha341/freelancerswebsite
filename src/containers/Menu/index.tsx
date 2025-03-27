@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import Button from 'components/Button';
-// import LanguageSelector from 'components/LanguageSelector';
 import Link from 'components/Link';
 import { SectionEnum } from 'enums/sections';
 import classNames from 'classnames';
@@ -13,25 +12,32 @@ import LogoImage from '../../assets/images/LogoImage.webp';
 function Menu() {
     const [visible, setVisible] = useState(true);
     const [className, setClassName] = useState('');
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 850); // less than 850px is considered mobile device
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
+        // Handle menu visibility
         let lastScrollTop = 0;
+        let ticking = false;
 
         const handleScroll = () => {
-            const currentScrollTop = window.scrollY;
-            if (currentScrollTop > lastScrollTop) {
-                // User is scrolling down
-                setVisible(false);
-            } else {
-                // User is scrolling up
-                setVisible(true);
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const currentScrollTop = window.scrollY;
+                    setVisible(
+                        currentScrollTop <= lastScrollTop ||
+                            currentScrollTop === 0,
+                    );
+                    lastScrollTop =
+                        currentScrollTop <= 0 ? 0 : currentScrollTop;
+                    ticking = false;
+                });
+                ticking = true;
             }
-            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
         };
 
         window.addEventListener('scroll', handleScroll);
 
-        // Clean up the event listener on component unmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -41,6 +47,15 @@ function Menu() {
         setTimeout(() => {
             setClassName('visible');
         }, 50);
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 850);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
@@ -56,56 +71,53 @@ function Menu() {
                     alt='HomePage Background'
                     className={`website-menu__left-side__logo-image ${className}`}
                 />
-                {/** 
-                <Effects
-                    duration={0.8}
-                    delay={0.1}
-                    initialState={{ opacity: 0, positionY: '-200px' }}
-                    finalState={{ opacity: 1, positionY: '0px' }}
+            </div>
+            {isMobile ? (
+                <div
+                    className={`website-menu__hamburguer-menu-container ${className}`}
                 >
-                    <div>
-                        <LanguageSelector />
+                    <button
+                        type='button'
+                        aria-label='Toggle navigation menu'
+                        aria-expanded={menuOpen} // used to indicate whether a collapsible UI element is open or closed (for Screen readers)
+                        onClick={() => setMenuOpen(!menuOpen)}
+                    >
+                        <MenuIcon />
+                    </button>
+                </div>
+            ) : (
+                <div className='website-menu__right-side'>
+                    <div
+                        className={`website-menu__right-side__link-container ${className}`}
+                    >
+                        <Link text='About' sectionId={SectionEnum.AboutUs} />
                     </div>
-                </Effects>
-                */}
-            </div>
-            <div className='website-menu__hamburguer-menu-container'>
-                <button
-                    type='button'
-                    aria-label='Menu'
-                    onClick={() => {
-                        //
-                    }}
-                >
-                    <MenuIcon />
-                </button>
-            </div>
-            <div className='website-menu__right-side'>
-                <div
-                    className={`website-menu__right-side__link-container ${className}`}
-                >
-                    <Link text='About' sectionId={SectionEnum.AboutUs} />
+                    <div
+                        className={`website-menu__right-side__link-container ${className}`}
+                    >
+                        <Link
+                            text='Services'
+                            sectionId={SectionEnum.Services}
+                        />
+                    </div>
+                    <div
+                        className={`website-menu__right-side__link-container ${className}`}
+                    >
+                        <Link text='Work' sectionId={SectionEnum.Projects} />
+                    </div>
+                    <div
+                        className={`website-menu__right-side__button-container ${className}`}
+                    >
+                        <Button
+                            text='Contact'
+                            animateText={false}
+                            onClick={() =>
+                                scrollToSection(SectionEnum.ContactUs)
+                            }
+                        />
+                    </div>
                 </div>
-                <div
-                    className={`website-menu__right-side__link-container ${className}`}
-                >
-                    <Link text='Services' sectionId={SectionEnum.Services} />
-                </div>
-                <div
-                    className={`website-menu__right-side__link-container ${className}`}
-                >
-                    <Link text='Work' sectionId={SectionEnum.Projects} />
-                </div>
-                <div
-                    className={`website-menu__right-side__button-container ${className}`}
-                >
-                    <Button
-                        text='Contact'
-                        animateText={false}
-                        onClick={() => scrollToSection(SectionEnum.ContactUs)}
-                    />
-                </div>
-            </div>
+            )}
         </div>
     );
 }

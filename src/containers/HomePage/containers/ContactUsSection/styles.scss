@@ -2,7 +2,7 @@
 
 .contact-us-section {
     padding: 150px $normalSectionPadding;
-    height: calc(100vh - 300px);
+    min-height: calc(100vh - 300px);
     color: $white;
     overflow: hidden;
     position: relative;
