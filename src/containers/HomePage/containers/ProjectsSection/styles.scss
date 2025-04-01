@@ -1,24 +1,15 @@
 @import '/src/variables';
 
 .projects-section-container {
-    margin-top: 100px;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+    min-height: calc(100vh - 200px);
 
-    &__projects {
-        display: grid;
-        gap: 0px; // Adjust spacing between projects
-        grid-template-columns: repeat(4, 1fr); // Default to 4 columns
-    
-        @media (max-width: 1500px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    
-        @media (max-width: 800px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    
-        @media (max-width: 500px) {
-            grid-template-columns: repeat(1, 1fr);
-        }
+    &__video {
+        max-width: 1400px;
+        height: auto;
+        border-radius: 10px;
     }
 }

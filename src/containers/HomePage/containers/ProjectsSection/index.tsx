@@ -1,50 +1,46 @@
-/* eslint-disable react/no-array-index-key */
 import React, { useEffect, useRef, useState } from 'react';
 import './styles.scss';
-import ProjectPreview from 'components/ProjectPreview';
 import { SectionEnum } from 'enums/sections';
-import { currentProjects } from './utils';
+import useElementOnScreen from 'hooks/useElementOnScreen';
+import PosterImage from '../../../../assets/images/VideoPreviewImage.png';
+import ProjectsVideoMP4 from '../../../../assets/videos/SampleVideo.mp4';
+import ProjectsVideoWEBM from '../../../../assets/videos/SampleVideo.webm';
 
 function ProjectsSection() {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [size, setSize] = useState(0);
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const triggered = useElementOnScreen(sectionRef, 0, false);
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        const observer = new ResizeObserver(entries => {
-            entries.forEach(entry =>
-                requestAnimationFrame(() => {
-                    if (entry.contentRect.width !== size) {
-                        setSize(entry.contentRect.width);
-                    }
-                }),
-            );
-        });
-
-        if (containerRef.current) {
-            observer.observe(containerRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, [size]);
+        if (triggered && !visible) setVisible(true);
+    }, [triggered]);
 
     return (
-        <div className='projects-section-container' id={SectionEnum.Projects}>
-            <div className='projects-section-container__projects'>
-                {currentProjects.map((project, index) => (
-                    <div
-                        className='projects-section-container__projects__project-container'
-                        style={{ height: `${size}px` }}
-                        ref={index === 0 ? containerRef : undefined}
-                        key={index}
-                    >
-                        <ProjectPreview
-                            image={project.image}
-                            preview={project.preview}
-                            title={project.title}
-                        />
-                    </div>
-                ))}
-            </div>
+        <div
+            className='projects-section-container'
+            id={SectionEnum.Projects}
+            ref={sectionRef}
+        >
+            {visible && (
+                <video
+                    className='projects-section-container__video'
+                    autoPlay
+                    playsInline
+                    controls
+                    poster={PosterImage}
+                >
+                    <source src={ProjectsVideoMP4} type='video/mp4' />
+                    <source src={ProjectsVideoWEBM} type='video/webm' />
+                    <track
+                        src='/videos/dummy.vtt'
+                        kind='captions'
+                        srcLang='en'
+                        label='English'
+                        default
+                    />
+                    Your browser does not support the video tag.
+                </video>
+            )}
         </div>
     );
 }
