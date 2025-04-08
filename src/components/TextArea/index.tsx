@@ -26,7 +26,6 @@ function TextArea({
                     onChange ? ev => onChange(ev.target.value) : undefined
                 }
                 rows={4}
-                autoComplete='off'
             />
             {$error && typeof $error === 'string' && (
                 <p className='text-area__message'>{$error}</p>

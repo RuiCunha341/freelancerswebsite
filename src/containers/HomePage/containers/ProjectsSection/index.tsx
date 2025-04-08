@@ -27,6 +27,7 @@ function ProjectsSection() {
                     autoPlay
                     playsInline
                     controls
+                    muted
                     poster={PosterImage}
                 >
                     <source src={ProjectsVideoMP4} type='video/mp4' />

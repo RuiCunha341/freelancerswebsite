@@ -1,10 +1,10 @@
 export interface ContactUsRequest {
     /** Client name */
-    name: string;
+    clientName: string;
     /** Company name */
-    company: string;
+    clientCompany: string;
     /** Client email */
-    email: string;
+    clientEmail: string;
     /** Client project description */
-    project: string;
+    clientProject: string;
 }

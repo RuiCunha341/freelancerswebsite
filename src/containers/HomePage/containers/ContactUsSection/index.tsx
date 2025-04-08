@@ -110,10 +110,11 @@ function ContactUsSection() {
                     >
                         <Input
                             placeholder='Name'
-                            {...register('name')}
+                            {...register('clientName')}
                             $error={
                                 triedToSubmit &&
-                                (form.name === undefined || form.name === ''
+                                (form.clientName === undefined ||
+                                form.clientName === ''
                                     ? '* Required field'
                                     : undefined)
                             }
@@ -126,11 +127,11 @@ function ContactUsSection() {
                     >
                         <Input
                             placeholder='Company'
-                            {...register('company')}
+                            {...register('clientCompany')}
                             $error={
                                 triedToSubmit &&
-                                (form.company === undefined ||
-                                form.company === ''
+                                (form.clientCompany === undefined ||
+                                form.clientCompany === ''
                                     ? '* Required field'
                                     : undefined)
                             }
@@ -143,12 +144,12 @@ function ContactUsSection() {
                     >
                         <Input
                             placeholder='Email'
-                            {...register('email')}
+                            {...register('clientEmail')}
                             $error={
                                 triedToSubmit &&
-                                (form.email === undefined ||
-                                form.email === '' ||
-                                !emailRegex.test(form.email)
+                                (form.clientEmail === undefined ||
+                                form.clientEmail === '' ||
+                                !emailRegex.test(form.clientEmail)
                                     ? '* Required field'
                                     : undefined)
                             }
@@ -161,11 +162,11 @@ function ContactUsSection() {
                     >
                         <TextArea
                             placeholder='Project'
-                            {...register('project')}
+                            {...register('clientProject')}
                             $error={
                                 triedToSubmit &&
-                                (form.project === undefined ||
-                                form.project === ''
+                                (form.clientProject === undefined ||
+                                form.clientProject === ''
                                     ? '* Required field'
                                     : undefined)
                             }
@@ -186,15 +187,15 @@ function ContactUsSection() {
                                 disabled={
                                     !loading &&
                                     hasChanges &&
-                                    (form.name === undefined ||
-                                        form.name === '' ||
-                                        form.company === undefined ||
-                                        form.company === '' ||
-                                        !form.email ||
-                                        form.email === '' ||
-                                        !emailRegex.test(form.email) ||
-                                        form.project === undefined ||
-                                        form.project === '')
+                                    (form.clientName === undefined ||
+                                        form.clientName === '' ||
+                                        form.clientCompany === undefined ||
+                                        form.clientCompany === '' ||
+                                        !form.clientEmail ||
+                                        form.clientEmail === '' ||
+                                        !emailRegex.test(form.clientEmail) ||
+                                        form.clientProject === undefined ||
+                                        form.clientProject === '')
                                 }
                             />
                         </div>

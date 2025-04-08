@@ -5,27 +5,30 @@
     padding: 150px $normalSectionPadding;
     overflow: hidden;
     background-color: $white;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: space-between;
-    height: calc(100vh - 300px);
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 80px !important;
+    min-height: calc(100vh - 300px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+
+    @media (max-width: 1300px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 700px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     &__service {
         position: relative;
-        width: calc((100% - 240px - 150px) / 4);
         height: 100%;
+        max-height: 500px;
         opacity: 0;
         transform: scale(0.5);
 
-        @media (max-width: 800px) {
-            width: calc((100% - 30px) / 2);
-        }
-
-        @media (max-width: 500px) {
-            width: 100%;
+        @media (max-width: 1300px) {
+            max-height: unset;
         }
     }
 
