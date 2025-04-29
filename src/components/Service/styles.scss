@@ -1,33 +1,33 @@
 @import '/src/variables';
 
 .service-container {
-    border-left: 1px solid $black;
-    padding-left: 18px;
+    border-left: 1px solid transparent;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
-
-    &__index {
-        font-size: 20px;
-    }
+    background-color: $darkGrey;
+    border-radius: 10px;
+    padding: 20px 20px 10px;
 
     &__content {
+        width: 100%;
         &__title {
             transition: all 0.2s ease-in-out;
-            font-size: 20px;
-            margin-bottom: 40px;
-            color: $black;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: $white;
+            text-transform: uppercase;
         }
 
         &__description {
-            color: $black;
-            font-size: 16px;
-            border-bottom: 1px dotted $black;
-            padding-bottom: 7px;
-            margin-bottom: 7px;
+            color: $lightGrey;
+            font-size: 14px;
+            border-bottom: 1px dotted lightGrey;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
             opacity: 0;
             transform: scale(0.5);
         }
@@ -49,6 +49,6 @@
     cursor: pointer;
 
     .title {
-        font-size: 25px;
+        font-size: 20px;
     }
 }

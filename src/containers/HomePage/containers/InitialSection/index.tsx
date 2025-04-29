@@ -25,7 +25,7 @@ function InitialSection() {
                 className={`initial-section__background-image ${className}`}
             />
             <p className={`initial-section__text ${className}`}>
-                Your idea, we make it
+                Your idea, we make it.
             </p>
         </div>
     );

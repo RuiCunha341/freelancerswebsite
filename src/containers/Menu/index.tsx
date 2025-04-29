@@ -90,7 +90,7 @@ function Menu() {
                     <div
                         className={`website-menu__right-side__link-container ${className}`}
                     >
-                        <Link text='About' sectionId={SectionEnum.AboutUs} />
+                        <Link text='Work' sectionId={SectionEnum.Projects} />
                     </div>
                     <div
                         className={`website-menu__right-side__link-container ${className}`}
@@ -101,16 +101,10 @@ function Menu() {
                         />
                     </div>
                     <div
-                        className={`website-menu__right-side__link-container ${className}`}
-                    >
-                        <Link text='Work' sectionId={SectionEnum.Projects} />
-                    </div>
-                    <div
                         className={`website-menu__right-side__button-container ${className}`}
                     >
                         <Button
                             text='Contact'
-                            animateText={false}
                             onClick={() =>
                                 scrollToSection(SectionEnum.ContactUs)
                             }

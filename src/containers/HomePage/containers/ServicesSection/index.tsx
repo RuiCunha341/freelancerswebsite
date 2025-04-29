@@ -5,16 +5,10 @@ import { SectionEnum } from 'enums/sections';
 import { IService } from 'components/Service/interface';
 import Service from 'components/Service';
 import useElementOnScreen from 'hooks/useElementOnScreen';
-import BrandingAndIdentityAnimationData from 'assets/animations/BRANDING_IDENTITY_ANIM_V1.json';
-import WebAppPlatformAnimationData from 'assets/animations/WEB_APP_PLATFORM_ANIM_V1.json';
-import PostProductionAnimationData from 'assets/animations/POST-PRODUCTION_ANIM_V1.json';
-import AnimationVfxAnimationData from 'assets/animations/ANIMATION_VFX_ANIM_V1.json';
 
 export const currentServices: IService[] = [
     {
-        index: '001',
         title: 'Branding & Identity',
-        animation: BrandingAndIdentityAnimationData,
         description: [
             'Logo Design',
             'Identity Buildout',
@@ -24,9 +18,7 @@ export const currentServices: IService[] = [
         ],
     },
     {
-        index: '002',
         title: 'Web / App / Platform',
-        animation: WebAppPlatformAnimationData,
         description: [
             'Concept to Design',
             'Full-stack Development',
@@ -36,9 +28,7 @@ export const currentServices: IService[] = [
         ],
     },
     {
-        index: '003',
         title: 'Post-Production',
-        animation: PostProductionAnimationData,
         description: [
             'Marketing Videos',
             'Television Commercials',
@@ -48,9 +38,7 @@ export const currentServices: IService[] = [
         ],
     },
     {
-        index: '004',
         title: 'Animation / VFX',
-        animation: AnimationVfxAnimationData,
         description: [
             '2D Animation',
             '3D Animation',
@@ -76,22 +64,25 @@ function ServicesSection() {
             id={SectionEnum.Services}
             ref={sectionRef}
         >
-            {currentServices.map((service, index) => (
-                <div
-                    className={`services-section__service ${
-                        visible ? 'visible' : ''
-                    }`}
-                    key={index}
-                >
-                    <Service
+            <div className='services-section__content'>
+                {currentServices.map((service, index) => (
+                    <div
+                        className={`services-section__content__service ${
+                            visible ? 'visible' : ''
+                        }`}
                         key={index}
-                        index={service.index}
-                        title={service.title}
-                        animation={service.animation}
-                        description={service.description}
-                    />
-                </div>
-            ))}
+                    >
+                        <Service
+                            key={index}
+                            title={service.title}
+                            description={service.description}
+                        />
+                    </div>
+                ))}
+            </div>
+            <p className={`services-section__text ${visible ? 'visible' : ''}`}>
+                At your service.
+            </p>
         </div>
     );
 }

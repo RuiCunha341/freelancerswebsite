@@ -69,7 +69,7 @@ function ContactUsSection() {
                     visible ? 'visible' : ''
                 }`}
             >
-                Let’s talk about you, your company, your next project
+                Let’s talk about you, your company, your next project.
             </p>
             {/** 
             <div style={{ width: 300, height: 300, backgroundColor: 'red' }}>
