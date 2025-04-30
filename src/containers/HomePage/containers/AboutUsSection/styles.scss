@@ -55,17 +55,21 @@
             transition: all 0.8s 0.4s ease-in-out;
         }
 
-        @media (max-width: 1250px) {
+        @media (max-width: 1300px) {
             &__text {
                 font-size: 45px;
-                text-align: center;
             }
         }
 
-        @media (max-width: 625px) {
+        @media (max-width: 750px) {
+            &__text {
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 550px) {
             &__text {
                 font-size: 25px;
-                text-align: center;
             }
         }
     }

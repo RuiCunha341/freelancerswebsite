@@ -1,6 +1,6 @@
 export enum SectionEnum {
     AboutUs = 'about-us',
-    Projects = 'projects',
+    Video = 'video',
     Services = 'services',
     ContactUs = 'contact-us',
 }

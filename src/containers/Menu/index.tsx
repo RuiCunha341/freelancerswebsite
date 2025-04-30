@@ -90,7 +90,7 @@ function Menu() {
                     <div
                         className={`website-menu__right-side__link-container ${className}`}
                     >
-                        <Link text='Work' sectionId={SectionEnum.Projects} />
+                        <Link text='Work' sectionId={SectionEnum.Video} />
                     </div>
                     <div
                         className={`website-menu__right-side__link-container ${className}`}

@@ -6,7 +6,7 @@ import PosterImage from '../../../../assets/images/VideoPreviewImage.png';
 import ProjectsVideoMP4 from '../../../../assets/videos/SampleVideo.mp4';
 import ProjectsVideoWEBM from '../../../../assets/videos/SampleVideo.webm';
 
-function ProjectsSection() {
+function VideoSection() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggered = useElementOnScreen(sectionRef, 0, false);
     const [visible, setVisible] = useState(false);
@@ -17,13 +17,13 @@ function ProjectsSection() {
 
     return (
         <div
-            className='projects-section-container'
-            id={SectionEnum.Projects}
+            className='video-section-container'
+            id={SectionEnum.Video}
             ref={sectionRef}
         >
             {visible && (
                 <video
-                    className='projects-section-container__video'
+                    className='video-section-container__video'
                     autoPlay
                     playsInline
                     controls
@@ -46,4 +46,4 @@ function ProjectsSection() {
     );
 }
 
-export default ProjectsSection;
+export default VideoSection;

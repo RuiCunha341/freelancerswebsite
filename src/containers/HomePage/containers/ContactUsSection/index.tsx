@@ -6,8 +6,6 @@ import Input from 'components/Input';
 import { emailRegex } from 'utils/regex';
 import Button from 'components/Button';
 import useElementOnScreen from 'hooks/useElementOnScreen';
-// import Lottie from 'lottie-react';
-// import animationData from 'assets/animations/animation2.json';
 import TextArea from 'components/TextArea';
 import BackgroundImage1920 from '../../../../assets/images/ContactUsImage1920.webp';
 import BackgroundImage1600 from '../../../../assets/images/ContactUsImage1600.webp';
@@ -24,9 +22,11 @@ function ContactUsSection() {
     const triggered = useElementOnScreen(sectionRef, 0, false);
     const [visible, setVisible] = useState(false);
     // form logic
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { register, submit, form, hasChanges } = useForm<ContactUsRequest>({
         url: '',
         onSuccess: () => {
+            // eslint-disable-next-line no-console
             console.log('SUBMITTED');
             /*
                 toast.success({
@@ -40,6 +40,7 @@ function ContactUsSection() {
             setLoading(false);
         },
         onError: () => {
+            // eslint-disable-next-line no-console
             console.log('SUBMITTED');
             setLoading(false);
         },

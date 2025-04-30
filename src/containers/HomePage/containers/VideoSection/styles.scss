@@ -1,6 +1,6 @@
 @import '/src/variables';
 
-.projects-section-container {
+.video-section-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,8 +8,14 @@
     min-height: calc(100vh - 200px);
 
     &__video {
-        max-width: 1400px;
+        width: 1400px;
         height: auto;
         border-radius: 10px;
+    }
+
+    @media (max-width: 1700px) {
+        &__video {
+            width: 80vw;
+        }
     }
 }
