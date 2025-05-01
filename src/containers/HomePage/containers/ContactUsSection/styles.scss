@@ -218,6 +218,7 @@
 
     @media (max-width: 450px) {
         &__content {
+            gap: 80px;
             &__left-side {
                 flex-wrap: wrap;
                 row-gap: 30px;

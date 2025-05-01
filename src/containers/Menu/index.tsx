@@ -50,6 +50,10 @@ function Menu() {
     }, []);
 
     useEffect(() => {
+        if (!visible) setMenuOpen(false);
+    }, [visible]);
+
+    useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 850);
         };
@@ -112,6 +116,30 @@ function Menu() {
                     </div>
                 </div>
             )}
+            <div
+                className={classNames(
+                    'website-menu__hamburguer-menu-opened-container',
+                    {
+                        visible: menuOpen,
+                    },
+                )}
+            >
+                <div
+                    className={`website-menu__hamburguer-menu-opened-container__link-container ${className}`}
+                >
+                    <Link text='Work' sectionId={SectionEnum.Video} />
+                </div>
+                <div
+                    className={`website-menu__hamburguer-menu-opened-container__link-container ${className}`}
+                >
+                    <Link text='Services' sectionId={SectionEnum.Services} />
+                </div>
+                <div
+                    className={`website-menu__hamburguer-menu-opened-container__link-container ${className}`}
+                >
+                    <Link text='Contact' sectionId={SectionEnum.ContactUs} />
+                </div>
+            </div>
         </div>
     );
 }
