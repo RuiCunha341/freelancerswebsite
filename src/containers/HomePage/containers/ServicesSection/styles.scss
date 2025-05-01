@@ -100,6 +100,11 @@
         }
     }
 
+    @media (max-width: 850px) {
+        padding: 60px $tabletSectionPadding;
+        min-height: unset;
+    }
+
     @media (max-width: 800px) {
         &__content {
             max-width: 300px;

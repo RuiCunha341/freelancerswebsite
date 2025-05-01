@@ -54,20 +54,31 @@
         &__text:nth-child(3) {
             transition: all 0.8s 0.4s ease-in-out;
         }
+    }
 
-        @media (max-width: 1300px) {
+    @media (max-width: 1300px) {
+        &__text-container {
             &__text {
                 font-size: 45px;
             }
         }
+    }
 
-        @media (max-width: 750px) {
+    @media (max-width: 850px) {
+        padding: 0px 0px 80px;
+        min-height: unset;
+    }
+
+    @media (max-width: 750px) {
+        &__text-container {
             &__text {
                 font-size: 35px;
             }
         }
+    }
 
-        @media (max-width: 550px) {
+    @media (max-width: 550px) {
+        &__text-container {
             &__text {
                 font-size: 25px;
             }

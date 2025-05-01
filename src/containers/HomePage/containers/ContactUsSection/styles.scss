@@ -180,7 +180,8 @@
         }
     }
 
-    @media (max-width: 875px) {
+    @media (max-width: 850px) {
+        padding: 60px $tabletSectionPadding;
         &__content {
             flex-direction: column-reverse;
             &__left-side,
@@ -201,15 +202,30 @@
         &__title {
             font-size: 25px;
         }
+        &__content{
+            &__right-side{
+                &__footer{
+                    &__button-container{
+                        width: 100%;
+                        & > button{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: 450px) {
         &__content {
             &__left-side {
                 flex-wrap: wrap;
-                row-gap: 40px;
+                row-gap: 30px;
                 &__text-container {
                     width: 100%;
+                    &__title {
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
